@@ -16,8 +16,20 @@ THREE.C4DCurveLoader.prototype = {
 
 		var scope = this;
 
+		if ( THREE.TextureLoader ) {
+
+			THREE.TextureLoader.prototype.crossOrigin = '';
+
+		}
+
+
+		if ( THREE.ImageLoader ) {
+
+			THREE.ImageLoader.prototype.crossOrigin = '';
+
+		}
+
 		var loader = new THREE.XHRLoader( scope.manager );
-		loader.setCrossOrigin( this.crossOrigin );
 		loader.load( url, function ( text ) {
 
 			onLoad( scope.parse( text ) );
