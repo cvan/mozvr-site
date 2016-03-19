@@ -1,6 +1,9 @@
 {
   "404.html": [
+    "demos/",
+    "demos/polarsesa/",
     "downloads/",
+    "HIRO/",
     "posts/",
     "posts/making-sechelt",
     "posts/quick-vr-prototypes/",
