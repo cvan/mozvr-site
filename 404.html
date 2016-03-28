@@ -8,6 +8,7 @@
         var BLOG_BASE_URL = 'https://mozvr.ghost.io';
         var path = window.location.pathname;
         var qs = window.location.search;
+        var hash = window.location.hash;
         var pathWithSlash = addSlash(path);
 
         function addSlash (path) {
@@ -23,7 +24,7 @@
           return pathWithSlash.indexOf(addSlash(url)) !== -1;
         }
         function redirect (url) {
-          window.location.href = url + qs;
+          window.location.href = url + qs + hash;
         }
 
         if (pathIs('/posts/webvr-lands-in-nightly/')) {
@@ -34,7 +35,11 @@
           redirect(BLOG_BASE_URL);
         } else if (pathContains('/downloads')) {
           redirect('/#start');
-        } else if (pathContains('/projects')) {
+        } else if (pathContains('/demos/polarsea')) {
+          redirect('/demos/polarsea/');
+        } else if (pathContains('/demos/sechelt')) {
+          redirect('https://mozvr.github.io/sechelt/');
+        } else if (pathContains('/projects') || pathContains('/demos')) {
           redirect('/#showcase');
         } else {
           redirect('/');
