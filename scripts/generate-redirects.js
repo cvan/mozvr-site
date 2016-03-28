@@ -28,7 +28,7 @@ function getBody (fn) {
 }
 
 function getPathRelative () {
-  var args = Array.apply(null, arguments).sort();
+  var args = Array.apply(null, arguments);
   return path.join.apply(this, [ROOT_DIR].concat(args));
 }
 
@@ -85,6 +85,7 @@ pushd(getPathRelative(DESTINATION_DIR));
 Object.keys(SPA_ROUTES).forEach(function (fallback) {
   var routeList = SPA_ROUTES[fallback];
   routeList.forEach(function (uri) {
+    if (!uri) { return; }
     addRoute(uri, fallback);
   });
 });
