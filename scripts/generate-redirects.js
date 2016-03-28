@@ -85,7 +85,8 @@ pushd(getPathRelative(DESTINATION_DIR));
 Object.keys(SPA_ROUTES).forEach(function (fallback) {
   var routeList = SPA_ROUTES[fallback];
   routeList.forEach(function (uri) {
-    addRoute(uri, fallback);
+    if (!uri) { return; }
+    addRoute(uri.toLowerCase(), fallback);
   });
 });
 
