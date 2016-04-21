@@ -6,33 +6,50 @@
       (function () {
         // Legacy redirects.
         var BLOG_BASE_URL = 'https://mozvr.ghost.io';
+        var BLOG_REDIRECTS = {
+          '/posts/webvr-lands-in-nightly': '/introducing-aframe/',
+          '/posts/quick-vr-prototypes/': '/quick-vr-prototypes/'
+        };
+
         var path = window.location.pathname;
         var qs = window.location.search;
         var hash = window.location.hash;
-        var pathWithSlash = addSlash(path);
+        var pathName = getPathname(path);
 
-        function addSlash (path) {
-          if (path.substr(-1) !== '/') {
-            path += '/';
-          }
-          return path;
+        function getPathname (path) {
+          return path.replace(/^\/+/, '/').replace(/\/+$/, '').replace(/[?#]/, '');
         }
-        function pathIs (url) {
-          return pathWithSlash === addSlash(url);
-        }
+
         function pathContains (url) {
-          return pathWithSlash.indexOf(addSlash(url)) !== -1;
-        }
-        function redirect (url) {
-          window.location.href = url + qs + hash;
+          return pathName.indexOf(getPathname(url)) === 0;
         }
 
-        if (pathIs('/posts/webvr-lands-in-nightly/')) {
-          redirect(BLOG_BASE_URL + '/webvr-lands-in-firefox-nightly/');
-        } else if (pathIs('/posts/quick-vr-prototypes/')) {
-          redirect(BLOG_BASE_URL + '/quick-vr-prototypes/');
+        function redirect (url, baseUrl) {
+          window.location.href = (baseUrl || '') + url + qs + hash;
+        }
+
+        function blogRedirect (url) {
+          return redirect(url, BLOG_BASE_URL);
+        }
+
+        if (pathContains('/posts/')) {
+          var newBlogPath = '';
+          var keys = Object.keys(BLOG_REDIRECTS);
+          var len = keys.length;
+          var newPath = '/';
+
+          for (var i = 0; i < len; ++i) {
+            oldBlogPath = keys[i];
+            newBlogPath = BLOG_REDIRECTS[oldBlogPath];
+            if (pathContains(oldBlogPath)) {
+              newPath = newBlogPath;
+              break;
+            }
+          }
+
+          blogRedirect(newPath);
         } else if (pathContains('/posts/') || pathContains('/blog/')) {
-          redirect(BLOG_BASE_URL);
+          blogRedirect('/');
         } else if (pathContains('/downloads')) {
           redirect('/#start');
         } else if (pathContains('/demos/polarsea')) {
