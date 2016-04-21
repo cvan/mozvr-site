@@ -12,7 +12,7 @@
   "homepage": "http://mozvr.com/",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
-    "ghpages": "^0.0.7",
+    "ghpages": "^0.0.8",
     "http-server": "^0.8.5",
     "postcss-cli": "^2.3.2",
     "shelljs": "^0.5.3"
