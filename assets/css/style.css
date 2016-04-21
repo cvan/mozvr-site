@@ -488,6 +488,7 @@ Top intro section
   letter-spacing: .015em;
   margin: auto;
   padding: 1.5rem;
+  text-transform: uppercase;
 }
 
 .headline {
