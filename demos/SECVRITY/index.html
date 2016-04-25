@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | SECVRITY</title>
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+  <script src="TemplateData/UnityProgress.js"></script>
+</head>
+<body class="template">
+  <p class="header"><span>Unity WebGL Player | </span>SECVRITY</p>
+  <div class="template-wrap clear">
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="720" width="1280"></canvas>
+    <div class="logo"></div>
+    <div class="fullscreen">
+      <img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="vrFullScreen()" />
+      <div style="margin-left:30px;background:rgb(70,147,217);color:white" class="title" onclick="vrSensor && vrSensor.resetSensor()">Reset Sensor</div>
+    </div>
+    <div class="title">SECVRITY</div>
+  </div>
+  <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+  <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 536870912,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/SECVRITY.data",
+    codeUrl: "Release/SECVRITY.js",
+    memUrl: "Release/SECVRITY.mem",
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  <script src="js/three.min.js"></script>
+  <script src="js/UnityWebVRManager.js"></script>
+</body>
+</html>
