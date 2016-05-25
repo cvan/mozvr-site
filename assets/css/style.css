@@ -794,10 +794,14 @@ a.link--license:hover {
 [data-supports-vr="false"][data-supports-vr-legacy="true"] [data-showcase-slug="inspirit"],
 [data-supports-vr="false"][data-supports-vr-legacy="true"] [data-showcase-slug="livyatanim"],
 [data-supports-vr="false"][data-supports-vr-legacy="true"] [data-showcase-slug="monkeys"],
-[data-supports-vr="false"][data-supports-vr-legacy="true"] [data-showcase-slug="polarsea"],
 [data-supports-vr="false"][data-supports-vr-legacy="true"] [data-showcase-slug="rainbowmembrane"],
 [data-supports-mobile="true"] [data-showcase-slug="waytogo"],
 [data-supports-mobile="true"] [data-showcase-slug="secvrity"] {
+  display: none;
+}
+
+/* Eventually, we'll remove it entirely (see issue #104, PR #105) */
+[data-showcase-slug="polarsea"] {
   display: none;
 }
 
