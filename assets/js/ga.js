@@ -38,8 +38,6 @@ function initGoogleAnalytics (id, opts) {
 
 function initGoogleAnalyticsEvents () {
   var indexPage = document.querySelector('html[data-index]');
-  var gdcPage = document.querySelector('html[data-gdc]');
-  var unityPage = document.querySelector('canvas.emscripten, body[data-unity-loaded]');
 
   window.addEventListener('load', function () {
     setTimeout(function () {
@@ -190,34 +188,6 @@ function initGoogleAnalyticsEvents () {
         ga('send', 'event', 'click.footer.icon_link', a.querySelector('img').getAttribute('alt'));
       } else if (a.matches('.section--footer p a')) {
         ga('send', 'event', 'click.footer.external_link', a.textContent);
-      }
-    });
-  }
-
-  if (gdcPage) {
-    gdcPage.addEventListener('click', function (e) {
-      var a = e.target.closest && e.target.closest('a') || e.target;
-      if (!a) { return; }
-      if (a.matches('#gdc-logo-link')) {
-        ga('send', 'event', 'click.nav.mozvr_link', a.querySelector('img').getAttribute('alt'));
-      } else if (a.matches('#gdc-info-link')) {
-        ga('send', 'event', 'click.nav.section_link', a.textContent);
-      } else if (a.matches('#gdc-continue-link')) {
-        ga('send', 'event', 'click.nav.icon_link', a.textContent);
-      }
-    });
-  }
-
-  if (unityPage) {
-    window.addEventListener('click', function (e) {
-      var a = e.target.closest && e.target.closest('a, button') || e.target;
-      if (!a) { return; }
-      if (a.matches('#btnVrToggle')) {
-        ga('send', 'event', 'click.unity.vr_button', a.textContent);
-      } else if (a.matches('#btnVrReset')) {
-        ga('send', 'event', 'click.unity.reset_button', a.textContent);
-      } else if (a.matches('#btnFsEnter')) {
-        ga('send', 'event', 'click.unity.fullscreen_button', a.textContent);
       }
     });
   }
