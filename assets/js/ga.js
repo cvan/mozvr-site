@@ -1,4 +1,4 @@
-/* global ga, Module, performance */
+/* global AFRAME, THREE, WEBVRPLUS, ga, performance */
 (function () {
 
 // Toggle this variable to output to the console debug GA messages.
@@ -26,7 +26,7 @@ function initGoogleAnalytics (id, opts) {
     if (!debug) {
       return;
     }
-    window.ga = ga = console.info.bind(console);
+    window.ga = console.info.bind(console);
   }
 
   enableDebug();
@@ -84,15 +84,6 @@ function initGoogleAnalyticsEvents () {
   };
 
   var gaSendPageTiming = gaSendTiming('page');
-  var gaSendEmscriptenTiming = gaSendTiming('emscripten', unityPage ? 'unity' : '<unknown>');
-
-  if ('Module' in window && 'performance' in window) {
-    gaSendEmscriptenTiming('preinit');
-    Module.onRuntimeInitialized = gaSendEmscriptenTiming.bind(this, 'init');
-    Module.postRun = [
-      gaSendEmscriptenTiming.bind(this, 'load')
-    ];
-  }
 
   ga('send', 'event', 'pageload.title', document.title);
   ga('send', 'event', 'pageload.location', window.location.href);
@@ -122,18 +113,21 @@ function initGoogleAnalyticsEvents () {
     return JSON.stringify(states);
   };
 
+  var fsElement;
+  var fsEvent;
+
   if (document.body.requestFullscreen) {
-    var fsElement = 'fullscreenElement';
-    var fsEvent = 'fullscreenchange';
+    fsElement = 'fullscreenElement';
+    fsEvent = 'fullscreenchange';
   } else if (document.body.mozRequestFullScreen) {
-    var fsElement = 'mozFullScreenElement';
-    var fsEvent = 'mozfullscreenchange';
+    fsElement = 'mozFullScreenElement';
+    fsEvent = 'mozfullscreenchange';
   } else if (document.body.webkitRequestFullscreen) {
-    var fsElement = 'webkitFullscreenElement';
-    var fsEvent = 'webkitfullscreenchange';
+    fsElement = 'webkitFullscreenElement';
+    fsEvent = 'webkitfullscreenchange';
   } else if (document.body.msRequestFullscreen) {
-    var fsElement = 'msFullscreenElement';
-    var fsEvent = 'MSFullscreenChange';
+    fsElement = 'msFullscreenElement';
+    fsEvent = 'MSFullscreenChange';
   }
 
   document.addEventListener(fsEvent, function () {
@@ -150,11 +144,11 @@ function initGoogleAnalyticsEvents () {
   });
 
   if (navigator.getVRDisplays) {
-    window.addEventListener('vrdisplaypresentchange', function () {
-      ga('send', 'event', 'modechange.vr', getPresentationStates(devices));
-    });
     navigator.getVRDisplays().then(function (devices) {
       ga('send', 'event', 'pageload.getVRDisplays', getDeviceNames(devices));
+      window.addEventListener('vrdisplaypresentchange', function () {
+        ga('send', 'event', 'modechange.vr', getPresentationStates(devices));
+      });
     });
   } else if (navigator.getVRDevices) {
     navigator.getVRDevices().then(function (devices) {
