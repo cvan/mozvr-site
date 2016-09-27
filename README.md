@@ -8,7 +8,7 @@ Source for Mozilla VR site: __http://mozvr.com/__
 1. Clone the repo:
 
     ```js
-    git clone git@github.com:MozVR/mozvr-site.git && cd mozvr.com
+    git clone git@github.com:MozVR/mozvr-site.git && cd mozvr-site
     ```
 
 2. Install the Node dependencies:
@@ -23,7 +23,7 @@ Serve the site from the simple server:
 
     npm run dev
 
-Then launch the site from your favourite browser:
+Then launch the site from your favorite browser:
 
 [__http://localhost:9090/__](http://localhost:9090/)
 
