@@ -64,6 +64,7 @@
             <ul>
               <li class="menu__item"><a class="no-decoration" href="#mobile">iOS and Android</a>
               <li class="menu__item"><a class="no-decoration" href="#rift">Oculus Rift</a>
+                <li class="menu__item"><a class="no-decoration" href="#vive">HTC Vive</a>
             </ul>
           </menu>
 
@@ -102,6 +103,26 @@
             <ul class="bullets">
               <li>Unfortunately, Mac and Linux are not supported with the Oculus Rift and cannot be used for viewing WebVR content.</li>
               <li>Check browser support at <a href="https://iswebvrready.org">iswebvrready.org</a>.</li>
+            </ul>
+          </div>
+
+          <div id="vive" class="menu__copy">
+            <div class="device-instructions">
+              <ol>
+                <li>Install <a href="https://nightly.mozilla.org/" target="_blank">Firefox Nightly</a> or <a href="https://webvr.info/get-chrome/" target="_blank">experimental builds of Chromium</a>.</li>
+                <li>Download version 1.02 of the openvr_api.dll from the OpenVR GitHub repository: <a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win32/openvr_api.dll">32-bit</a> | <a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win64/openvr_api.dll">64-bit</a>.</li>
+                <li>Save the openvr_api.dll file somewhere on your computer where the user running Firefox can read it.</li>
+                <li>In Firefox Nightly, navigate to "about:config"; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the "openvr_api.dll" file.</li>
+                <li>Restart Firefox Nightly.</li>
+              </ol>
+            </div>
+
+            <h3>Notes</h3>
+
+            <ul class="bullets">
+              <li>It is recommended that you start with a clean profile by <a href="https://support.mozilla.org/en-US/kb/refresh-firefox-reset-add-ons-and-settings">refreshing Firefox</a>. Some preference adjustments needed for earlier WebVR builds will cause problems with the current Nightly build.</li>
+              <li>To test if it works, try some of the <a href="https://webvr.info/samples/">WebVR 1.0 examples</a> or sites such as <a href="https://sketchfab.com">SketchFab</a> that support room-scale WebVR. To make your own WebVR sites, check out <a href="https://aframe.io">A-Frame</a>, <a href="https://threejs.org">three.js</a>, or the <a href="https://w3c.github.io/webvr/">WebVR 1.0 Spec</a> for details.</li>
+              <li>Vive controller support has not yet landed in Firefox.</li>
             </ul>
           </div>
 
