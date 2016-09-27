@@ -171,6 +171,10 @@ body {
   font-family: Fira Sans, sans-serif;
 }
 
+code {
+  font-family: Consolas, Andale Mono, Monaco, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
 h1, h2, h3, h4 {
   font-weight: 400;
 }
