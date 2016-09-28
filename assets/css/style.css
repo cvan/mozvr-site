@@ -663,7 +663,8 @@ team
 }
 
 .section--team h2 {
-  margin: 0 0 0.5rem;
+  margin: 0 0 .25rem;
+  text-transform: none;
 }
 
 .person {
@@ -677,7 +678,7 @@ team
 }
 
 .person[data-person]:before {
-  border-radius: 50%;
+  box-shadow: 3px 3px 0 0 rgba(0,0,0,.1);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -692,9 +693,6 @@ team
   max-width: 110px;
 }
 
-.person[data-person="vlad"]:before {
-  background-image: url(../img/team/vlad.jpg);
-}
 .person[data-person="casey"]:before {
   background-image: url(../img/team/casey.png);
 }
@@ -704,27 +702,31 @@ team
 .person[data-person="diego"]:before {
   background-image: url(../img/team/diego.jpg);
 }
-.person[data-person="kip"]:before {
-  background-image: url(../img/team/kip.jpg);
+.person[data-person="fernando"]:before {
+  background-image: url(../img/team/fernando.jpg);
 }
 .person[data-person="kevin"]:before {
   background-image: url(../img/team/kevin.jpg);
 }
+.person[data-person="kip"]:before {
+  background-image: url(../img/team/kip.jpg);
+}
 
-/* A little hack for larger click targets. */
+/* Make click target larger. */
+.person__social__name,
 .person__social__link {
-  display: block;
-  position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
+  position: absolute;
   right: 0;
 }
-.person__social__name {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.person__social__link {
+  opacity: .85;
+  top: 0;
+}
+
+.person__social__link:hover {
+  opacity: 1;
 }
 
 .person__social__link:hover .person__social__name {
