@@ -1,31 +1,20 @@
 {
-  "name": "mozvr-site",
-  "private": true,
+  "name": "hexo-site",
   "version": "0.0.0",
-  "description": "A-Frame",
-  "repository": "mozvr/mozvr-site",
-  "author": "MozVR",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MozVR/mozvr-site/issues"
+  "private": true,
+  "hexo": {
+    "version": "3.2.2"
   },
-  "homepage": "http://mozvr.com/",
-  "devDependencies": {
-    "autoprefixer": "^6.0.3",
-    "ghpages": "^0.0.8",
-    "http-server": "^0.8.5",
-    "postcss-cli": "^2.3.2",
-    "shelljs": "^0.5.3"
-  },
-  "scripts": {
-    "start": "npm run dev",
-    "dev": "http-server -c-1 -p 9090",
-    "build": "rm -rf _build && mkdir -p _build/assets/css/ && postcss --use autoprefixer assets/css/style.css -d _build/assets/css/ --browsers 'last 10 versions' --map --no-cascade",
-    "prod": "npm run build && rm -rf _prod && mkdir -p _prod && cp -r {.nojekyll,CNAME,assets,demos,*.html,showcase} _prod/. 2>/dev/null || : && cp -r _build/* _prod/. && node scripts/generate-redirects.js",
-    "preghpages": "npm run prod",
-    "ghpages": "GHPAGES_REPO='mozvr/mozvr.github.io' ghpages",
-    "gh-pages": "npm run ghpages",
-    "publish": "npm run ghpages",
-    "deploy": "npm run ghpages"
+  "dependencies": {
+    "hexo": "^3.2.0",
+    "hexo-generator-archive": "^0.1.4",
+    "hexo-generator-category": "^0.1.3",
+    "hexo-generator-index": "^0.2.0",
+    "hexo-generator-tag": "^0.2.0",
+    "hexo-migrator-ghost": "0.0.1",
+    "hexo-renderer-ejs": "^0.2.0",
+    "hexo-renderer-marked": "^0.2.10",
+    "hexo-renderer-stylus": "^0.3.1",
+    "hexo-server": "^0.2.0"
   }
 }
