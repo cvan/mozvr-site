@@ -71,18 +71,17 @@
           <div id="mobile" class="menu__copy">
             <div class="device-instructions">
               <ol>
-                <li>Load your site in a browser.</li>
-                <li>Hold up your phone and move it around to "look", or touch-and-drag to rotate.</li>
-                <li>Tap the "VR" icon button, and drop your phone in a Cardboard holder.</li>
+                <li>Load a WebVR site in a browser.</li>
+                <li>Hold up your phone and move it around to look, or touch-and-drag to rotate.</li>
+                <li>Tap the "VR" icon button, and insert your phone into a <a href="https://vr.google.com/cardboard/">Cardboard</a> <a href="https://vr.google.com/cardboard/get-cardboard/">holder</a>.</li>
               </ol>
             </div>
 
             <h3>Notes</h3>
 
             <ul class="bullets">
-              <li>Requires a WebGL-compatible browser. The faster the phone the better. We recommend Google Cardboard V2-compatible headsets for best results. Tested with Mobile Safari and Firefox for iOS, and Firefox for Android, and Chrome on Android.</li>
-
-              <li>Requires iOS 9.1 or greater. The faster the iPhone the better. Tested in Mobile Safari and Firefox for iOS. We recommend Google Cardboard V2-compatible headset for best results with iPhones.</li>
+              <li>Requires a WebGL-compatible browser. The faster the phone, the better. We recommend <a href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard V2-compatible headsets</a> for best results. Tested with mobile Safari for iOS, Firefox for iOS, Firefox for Android, and Chrome for Android.</li>
+              <li>Requires iOS 9.1 or greater. The faster the iPhone, the better. Tested in mobile Safari for iOS and Firefox for iOS. We recommend <a href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard V2-compatible headsets</a> for best results with iPhones (particularly, <a href="https://www.amazon.com/View-Master-Virtual-Reality-Starter-Pack/dp/B011EG5HJ2">Mattel's View-Master VR</a>).</li>
             </ul>
           </div>
 
@@ -91,9 +90,9 @@
               <ol>
                 <li>Install the latest <a href="https://developer.oculus.com/downloads/" target="_blank">Oculus runtime</a>.</li>
                 <li>Install <a href="https://nightly.mozilla.org/" target="_blank">Firefox Nightly</a> or <a href="https://webvr.info/get-chrome/" target="_blank">experimental builds of Chromium</a>.</li>
-                <li>Install the <a href="https://addons.mozilla.org/en-US/firefox/addon/mozilla-webvr-enabler/" target="_blank">WebVR enabler add-on</a> (Firefox only).</li>
+                <li>Install the <a href="https://addons.mozilla.org/firefox/addon/mozilla-webvr-enabler/" target="_blank">WebVR Plus add-on for Firefox</a> (optional).</li>
                 <li>Ensure that your Oculus settings allow for <a href="https://blog.mozvr.com/oculus-home-rift-cv1-webvr/#enablingunknownsources">Unknown Sources</a>.</li>
-                <li>Open your site.</li>
+                <li>Open a site with VR content.</li>
                 <li>Press the "Enter VR" button to send content into headset.</li>
               </ol>
             </div>
@@ -110,10 +109,12 @@
             <div class="device-instructions">
               <ol>
                 <li>Install <a href="https://nightly.mozilla.org/" target="_blank">Firefox Nightly</a> or <a href="https://webvr.info/get-chrome/" target="_blank">experimental builds of Chromium</a>.</li>
-                <li>Download version 1.02 of the openvr_api.dll from the OpenVR GitHub repository: <a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win32/openvr_api.dll">32-bit</a> | <a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win64/openvr_api.dll">64-bit</a>.</li>
-                <li>Save the openvr_api.dll file somewhere on your computer where the user running Firefox can read it.</li>
-                <li>In Firefox Nightly, navigate to "about:config"; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the "openvr_api.dll" file.</li>
+                <li>Download version 1.02 of the <code>openvr_api.dll</code> file from the OpenVR GitHub repository: <a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win32/openvr_api.dll">32-bit</a>, <a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win64/openvr_api.dll">64-bit</a>.</li>
+                <li>Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it.</li>
+                <li>In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file.</li>
                 <li>Restart Firefox Nightly.</li>
+                <li>Open a site.</li>
+                <li>Press the "Enter VR" button to send content into headset.</li>
               </ol>
             </div>
 
