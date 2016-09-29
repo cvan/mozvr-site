@@ -122,7 +122,8 @@ if (supportsMobile) {
 if (window.location.hash === '#mobile' ||
     window.location.hash === '#rift' ||
     window.location.hash === '#vive') {
-  return;
+  clickEl = document.querySelector('a[href="' + window.location.hash + '"]');
+  window.location.hash = '#start';
 }
 
 // Select tab based on mobile or desktop visitor.
