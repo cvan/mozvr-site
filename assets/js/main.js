@@ -119,6 +119,12 @@ if (supportsMobile) {
   }
 }
 
+if (window.location.hash === '#mobile' ||
+    window.location.hash === '#rift' ||
+    window.location.hash === '#vive') {
+  return;
+}
+
 // Select tab based on mobile or desktop visitor.
 if (clickEl) {
   clickEl.click();
