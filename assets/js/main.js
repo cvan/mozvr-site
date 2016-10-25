@@ -98,25 +98,12 @@ Tabs();
 var supportsMobile = isMobile();
 var clickEl = null;
 
-var heroIframe = $('.hero--iframe');
 if (supportsMobile) {
   body.setAttribute('data-supports-mobile', 'true');
-
   clickEl = document.querySelector('a[href="#mobile"]');
-
-  if (heroIframe) {
-    // Even though the `<iframe>` is hidden, it will get loaded - so let's remove.
-    heroIframe.parentNode.removeChild(heroIframe);
-  }
 } else {
   body.setAttribute('data-supports-mobile', 'false');
-
   clickEl = document.querySelector('a[href="#rift"]');
-
-  if (heroIframe) {
-    // We do this so mobile doesn't load the `<iframe src>`.
-    heroIframe.setAttribute('src', heroIframe.getAttribute('data-src'));
-  }
 }
 
 if (window.location.hash === '#mobile' ||
@@ -130,5 +117,13 @@ if (window.location.hash === '#mobile' ||
 if (clickEl) {
   clickEl.click();
 }
+
+window.addEventListener('hashchange', function () {
+  // When the "Mozilla VR" wordmark in the top nav is clicked,
+  // remove the `#top` hash from the URL.
+  if (window.location.hash === '#top') {
+    window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+  }
+});
 
 })();
