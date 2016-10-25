@@ -801,6 +801,7 @@ a.link--license:hover {
 [data-supports-vr="false"][data-supports-vr-legacy="true"] [data-showcase-slug="livyatanim"],
 [data-supports-vr="false"][data-supports-vr-legacy="true"] [data-showcase-slug="monkeys"],
 [data-supports-vr="false"][data-supports-vr-legacy="true"] [data-showcase-slug="rainbowmembrane"],
+[data-supports-mobile="true"] [data-showcase-slug="puzzlerain"],
 [data-supports-mobile="true"] [data-showcase-slug="waytogo"],
 [data-supports-mobile="true"] [data-showcase-slug="secvrity"] {
   display: none;
