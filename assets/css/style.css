@@ -538,7 +538,6 @@ Getting Started
 
 .menu__item.active a {
   color: #fff;
-  pointer-events: none;
   transition: none;
 }
 
