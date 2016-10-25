@@ -58,7 +58,13 @@
           redirect('https://mozvr.github.io/sechelt/');
         } else if (pathContains('/projects') || pathContains('/demos')) {
           redirect('/#showcase');
-        } else {
+        } else if (pathContains('/a-painter')) {
+          window.location.replace('/a-painter', 'https://aframe.io/a-painter');
+        } else if (pathContains('/apainter')) {
+          window.location.replace('/apainter', 'https://aframe.io/a-painter');
+        } else if (pathContains('/puzzlerain')) {
+          window.location.replace('/puzzlerain', '/puzzle-rain');
+        } else if (window.location.protocol !== 'file:') {
           redirect('/');
         }
       })();
