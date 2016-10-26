@@ -651,6 +651,13 @@ developers
   padding: 0.75rem;
 }
 
+.developers__icon {
+  width: 90px;
+  height: 90px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
 /*
 team
 */
