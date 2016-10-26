@@ -699,7 +699,7 @@ team
 }
 
 .person[data-person="casey"]:before {
-  background-image: url(../img/team/casey.png);
+  background-image: url(../img/team/casey.jpg);
 }
 .person[data-person="cvan"]:before {
   background-image: url(../img/team/cvan.jpg);
