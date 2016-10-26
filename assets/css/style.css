@@ -186,7 +186,6 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
-  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
@@ -208,8 +207,9 @@ a:hover:not(.no-decoration) {
   text-decoration: underline;
 }
 
-ul, ol {
-  margin: 0 0 1.5rem;
+ul,
+ol {
+  margin: 0 0 1.5rem 2rem;
 }
 
 ul {
@@ -218,17 +218,17 @@ ul {
 
 li {
   margin: 0 0 0.5rem;
-  list-style-position: inside
 }
 
 .bullets {
   list-style: disc;
-  list-style-position: inside;
 }
 
-.wrap > p:last-child,
-.wrap > ul:last-child,
-.wrap > ol:last-child {
+.wrap > *:first-child {
+  margin-top: 0;
+}
+
+.wrap > *:last-child {
   margin-bottom: 0;
 }
 
@@ -371,10 +371,11 @@ li {
 }
 
 .section h1 {
-  text-align: center;
   color: #1f366c;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;;
 }
 
 /*
@@ -384,37 +385,43 @@ Navigation
   display: none;
 }
 
-nav ul, nav li {
+nav ul,
+nav li {
   margin: 0;
 }
 
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
+  background: rgba(17,17,17,0.95);
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.15);
+  font-size: 0;
+  font-weight: 400;
   width: 100%;
-  background: rgba(245, 245, 245, 0.9);
   z-index: 2;
-  text-transform: uppercase;
-  text-align: center;
-  box-shadow: 0px 1px 0 0 rgba(0,0,0,.15);
+}
+
+.nav__top,
+.nav__item a,
+.social__link {
+  height: 40px;
+  line-height: 40px;
+}
+
+.nav__top,
+.nav__item a {
+  display: block;
+  font-size: 1rem;
+  padding: 0 1rem;
+  text-decoration: none;
 }
 
 .nav__top {
-  display: block;
-  float: left;
-  font-size: 1rem;
-  font-style: italic;
-  background: orange;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  text-decoration: none;
   background: #ffcd02;
-  padding: 0.5rem 1rem;
+  border: 1px solid #ac8a00;
+  border-left-width: 0;
   color: #333;
-  border-right: 1px solid #D0D0D0;
+  float: left;
+  font-style: italic;
+  font-weight: 600;
 }
 
 .nav__top:hover {
@@ -426,82 +433,69 @@ nav ul, nav li {
 }
 
 .nav__item a {
-  color: #333;
-  display: block;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
+  border-right: 1px solid rgba(255,255,255,.15);
+  color: #ddd;
 }
 
-.nav__item:hover {
-  background: #DCDCDC;
+.nav__item a:hover {
+  background: rgba(17,17,17,1);
+  color: #ffcd02;
 }
 
 .nav-social {
+  font-size: 0;
+  overflow: hidden;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 1rem;
+  top: 0;
+}
+
+.social--item + .social--item {
+  margin-left: 1rem;
 }
 
 .nav-social--item {
-  padding: 0.5rem;
+  display: inline-block;
+  padding: 9px 0;
+}
+
+.social__link {
+  opacity: .8;
+}
+
+.social__link:hover {
+  opacity: 1;
 }
 
 
 /*
 Top intro section
 */
-.header {
-  position: relative;
-}
-
-.hero {
+.masthead {
   border: 0;
-  background: #333;
-  color: #efefef;
-  background-image: url('../img/sechelt-masthead.png');
+  background: url(../img/sechelt.jpg);
   background-size: cover;
-  height: calc(200px + 40vw);
-  position: relative;
-}
-
-.hero--iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-[data-supports-mobile="true"] .hero--iframe {
-  display: none;
-}
-
-.hero--headline {
-  z-index: 1;
+  background-position: center center;
+  color: #333;
 }
 
 .wordmark {
-  width: 15rem;
-  color: #333;
   background: #ffcd02;
-  box-shadow: -3px 3px 0 0 rgba(0,0,0,.15);
-  font-size: 3rem;
+  color: #333;
+  display: inline-block;
+  font-size: 2rem;
   font-style: italic;
-  font-weight: 200;
-  letter-spacing: .015em;
-  margin: auto;
-  padding: 1.5rem;
-  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: -.05em;
+  margin: 2rem;
+  padding: 1.5rem 3rem;
 }
 
 .headline {
   font-size: 1.2rem;
+  font-weight: 400;
   color: #fff;
-  max-width: 35rem;
-  margin: 3rem;
-  padding: 0.5rem 1rem;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0,0,0,1);
 }
 
 
@@ -514,6 +508,10 @@ Getting Started
 
 .menu {
   text-align: center;
+}
+
+.menu ul {
+  margin: 0;
 }
 
 .menu__item {
@@ -766,7 +764,8 @@ footer
 a.link--footer {
   border-bottom: 1px dotted rgba(255, 255, 255, 0.25);
   padding-bottom: 1px;
-  line-height: 1.8;
+  line-height: 1.6;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -816,12 +815,18 @@ media queries
 */
 
 @media (max-width: 899px) {
+  .masthead {
+    margin-top: 0;
+  }
+
   nav {
     display: none;
   }
+
   .flex--grid--item {
     flex-basis: 50%;
   }
+
   .link--blog {
     background: #e14164;
     display: inline-block;
@@ -836,18 +841,18 @@ media queries
 }
 
 @media (max-width: 599px) {
-  nav {
-    display: none;
-  }
   .showcase__link {
     margin: 0;
   }
+
   .flex--grid--item {
     flex-basis: 100%;
   }
+
   .wrap .wrap {
     padding: 1rem 0;
   }
+
   .wrap--narrow.copy--center {
     text-align: left;
   }
