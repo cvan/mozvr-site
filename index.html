@@ -98,30 +98,40 @@
             <h3>Notes</h3>
 
             <ul class="bullets">
+              <li><a href="https://github.com/Web-VR/iswebvrready/wiki/Instructions%3A-Oculus-Rift">Detailed setup instructions.</a>
               <li>Unfortunately, Mac and Linux are not supported with the Oculus Rift and cannot be used for viewing WebVR content.</li>
               <li>Check latest browser support at <a href="https://iswebvrready.org">IsWebVRReady.org</a>.</li>
             </ul>
           </div>
 
           <div id="vive" class="menu__copy">
-            <h3>Instructions</h3>
+            <h3>Firefox Instructions</h3>
             <div class="device-instructions">
               <ol>
-                <li>Install <a href="https://nightly.mozilla.org/">Firefox Nightly</a> or <a href="https://webvr.info/get-chrome/">experimental builds of Chromium</a>.</li>
+                <li>Install <a href="https://nightly.mozilla.org/">Firefox Nightly</a></li>
                 <li>Download version 1.02 of the <code>openvr_api.dll</code> file from the OpenVR GitHub repository: <a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win32/openvr_api.dll">32-bit</a>, <a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win64/openvr_api.dll">64-bit</a>.</li>
                 <li>Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it.</li>
                 <li>In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file.</li>
                 <li>Restart Firefox Nightly.</li>
-                <li>Open a site.</li>
-                <li>Press the "Enter VR" button to send content into headset.</li>
+                <li>Enjoy WebVR content</li>
               </ol>
             </div>
 
+            <h3>Chromium Instructions</h3>
+            <ol>
+                <li>Install <a href="https://webvr.info/get-chrome/">experimental build of Chromium</a>.
+                <li>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR</code> flag.</li>
+                <li>In the URL bar, load <code>chrome://flags#enable-gamepad-extensions</code> and toggle the <code>Enable Gamepad Extensions</code> flag.
+                <li>Launch the <a href="https://support.steampowered.com/kb_article.php?ref=5254-FJKZ-7829">SteamVR</a> application.</li>
+                <li>Enjoy WebVR content</li>
+              </ol>
+
             <h3>Notes</h3>
             <ul class="bullets">
+              <li><a href="https://github.com/Web-VR/iswebvrready/wiki/Instructions%3A-HTC-Vive">Detailed setup instructions.</a>
               <li>It is recommended that you start with a clean profile by <a href="https://support.mozilla.org/en-US/kb/refresh-firefox-reset-add-ons-and-settings">refreshing Firefox</a>. Some preference adjustments needed for earlier WebVR builds will cause problems with the current Nightly build.</li>
-              <li>To test if it works, try some of the <a href="https://webvr.info/samples/">WebVR 1.0 examples</a> or sites such as <a href="https://sketchfab.com">SketchFab</a> that support room-scale WebVR. To make your own WebVR sites, check out <a href="https://aframe.io">A-Frame</a>, <a href="https://threejs.org">three.js</a>, or the <a href="https://w3c.github.io/webvr/">WebVR 1.0 Spec</a> for details.</li>
               <li>Vive controller support is coming soon to Firefox.</li>
+              <li>To test if it works, try some of the <a href="https://webvr.info/samples/">WebVR 1.0 examples</a> or sites such as <a href="https://sketchfab.com">SketchFab</a> that support room-scale WebVR. To make your own WebVR sites, check out <a href="https://aframe.io">A-Frame</a>, <a href="https://threejs.org">three.js</a>, or the <a href="https://w3c.github.io/webvr/">WebVR 1.0 Spec</a> for details.</li>
               <li>Check latest browser support at <a href="https://iswebvrready.org">IsWebVRReady.org</a>.</li>
             </ul>
           </div>
