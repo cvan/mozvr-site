@@ -655,7 +655,6 @@ developers
 .developers__icon {
   width: 90px;
   height: 90px;
-  float: left;
   margin: 0 10px 0 0;
 }
 
@@ -863,5 +862,11 @@ media queries
 
   .wrap--narrow.copy--center {
     text-align: left;
+  }
+}
+
+@media (min-width: 600px) {
+  .developers__icon {
+    float: left;
   }
 }
