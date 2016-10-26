@@ -635,7 +635,8 @@ Showcase
 developers
 */
 
-.section--developers {
+.section--developers,
+.section--community {
   background: #efefef;
 }
 
