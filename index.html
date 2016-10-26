@@ -29,9 +29,9 @@
 
       <ul>
         <li class="nav__item"><a class="no-decoration" href="#start">Getting Started</a></li>
+        <li class="nav__item"><a class="no-decoration" href="#downloads">Downloads</a></li>
+        <li class="nav__item"><a class="no-decoration" href="#api-and-tools">API &amp; Tools</a></li>
         <li class="nav__item"><a class="no-decoration" href="#showcase">Showcase</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#developers">Developing WebVR</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#community">Community</a></li>
         <li class="nav__item"><a class="no-decoration" href="#team">Team</a></li>
         <li class="nav__item"><a class="no-decoration" href="https://mozvr.ghost.io/">Blog</a></li>
       </ul>
@@ -139,14 +139,60 @@
         </div>
       </section>
 
+      <section class="section section--developers">
+        <!-- NOTE: Don't fret; this will all be updated very soon (hax!) -->
+        <div id="developers" class="section__anchor"></div>
+        <div id="downloads" class="section__anchor"></div>
+        <div id="api-and-tools" class="section__anchor"></div>
+        <div class="wrap">
+          <h1>Downloads &amp; Development</h1>
+          <ul class="flex flex--grid flex--grid--stretch developers__list">
+            <li class="flex--grid--item developers__item" id="browsers">
+              <h2>Browsers</h2>
+
+              <h4><a href="https://nightly.mozilla.org/">Firefox Nightly</a></h4>
+              <p>Nightly builds of Firefox</p>
+
+              <h4><a href="https://webvr.info/get-chrome/">Chromium</a></h4>
+              <p>Experimental builds of Chromium by Google Chrome engineer, <a href="https://twitter.com/tojiro">Brandon Jones</a></p>
+
+              <h4><a href="https://iswebvrready.org/">IsWebVRReady.org</a></h4>
+              <p>Check WebVR browser support status</p>
+            </li>
+            <li class="flex--grid--item developers__item" id="community">
+              <h2>Community</h2>
+
+              <h4><a href="https://webvr-slack.herokuapp.com/">WebVR Slack</a></h4>
+              <h4><a href="https://mail.mozilla.org/listinfo/web-vr-discuss">WebVR mailing list</a></h4>
+              <h4><a href="https://reddit.com/r/webvr">Reddit WebVR</a></h4>
+
+              <h2>Specification</h2>
+
+              <h4><a href="https://mozvr.github.io/webvr-spec/webvr.html">WebVR API Spec</a></h4>
+              <p>The WebVR API spec</p>
+            </li>
+            <li class="flex--grid--item developers__item" id="tools">
+              <h2>Tools</h2>
+              <img src="assets/img/icon-aframe.png" class="developers__icon" alt="A-Frame" title="A-Frame">
+              <h4><a href="https://aframe.io/">A-Frame</a></h4>
+              <p>WebVR content-creation framework by Mozilla</p>
+
+              <p><a href="https://aframevr-slack.herokuapp.com/">A-Frame Slack</a></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section class="section section--showcase">
         <div id="showcase" class="section__anchor"></div>
         <div class="wrap copy--bright">
           <h1>Showcase</h1>
 
           <div class="vrEnabled">
-            <p class="copy--center copy--big"><em>Your browser is VR enabled!</em><br/>
-            <span class="copy--subtitle">Check out these sites</span></p>
+            <p class="copy--center copy--big">
+              <em>Your browser is VR enabled!</em><br>
+              <span class="copy--subtitle">Check out these sites</span>
+            </p>
           </div>
 
           <ul class="flex flex--grid flex--grid--stretch showcase__grid">
@@ -276,64 +322,6 @@
       </section>
 
     </div>
-
-    <section class="section section--developers">
-      <div id="developers" class="section__anchor"></div>
-      <div class="wrap">
-        <h1>Developing WebVR</h1>
-
-        <p class="wrap wrap--narrow copy--center">WebVR provides support for exposing virtual-reality devices like the Oculus Rift to web apps, enabling developers to create virtual-reality experiences that run on any WebGL-enabled browser.</p>
-
-        <ul class="flex flex--grid flex--grid--stretch developers__list">
-          <li class="flex--grid--item developers__item">
-            <h2>Spec</h2>
-
-            <h4><a href="https://mozvr.github.io/webvr-spec/webvr.html">WebVR API Spec</a></h4>
-            <p>The WebVR API spec</p>
-
-            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">Documentation</a></h4>
-            <p>Overview, interface, and methods of the WebVR API, on MDN</p>
-          </li>
-          <li class="flex--grid--item developers__item">
-            <h2>Browsers</h2>
-
-            <h4><a href="https://nightly.mozilla.org/">Firefox Nightly</a></h4>
-
-            <h4><a href="https://webvr.info/get-chrome/">Chromium</a></h4>
-            <p>WebVR is enabled in experimental builds of Chromium created by Google engineer Brandon Jones</p>
-          </li>
-          <li class="flex--grid--item developers__item">
-            <h2>Resources</h2>
-
-            <h4><a href="https://aframe.io/">A-Frame</a></h4>
-            <p>MozVR’s open-source framework for creating WebVR worlds with markup</p>
-
-            <h4><a href="https://github.com/borismus/webvr-boilerplate">WebVR Boilerplate</a></h4>
-            <p>A starting point for web-based VR experiences that work in both Cardboard and Oculus</p>
-
-            <h4>Others</h4>
-            <p>
-              <a href="http://vizor.io">Vizor</a>,
-              <a href="http://tparisi.github.io/glam/">GLAM</a>,
-              <a href="http://www.scenevr.com/">SceneVR</a>
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section--community">
-      <div id="community" class="section__anchor"></div>
-      <div class="wrap section--showcase__wrap">
-        <h1>Community</h1>
-
-        <p class="copy--center">
-          <a href="https://webvr-slack.herokuapp.com/">WebVR Slack</a> &nbsp;&middot;&nbsp; <a href="https://aframevr-slack.herokuapp.com/">A-Frame Slack</a> &nbsp;&middot;&nbsp;
-          <a href="https://mail.mozilla.org/listinfo/web-vr-discuss">WebVR mailing list</a> &nbsp;&middot;&nbsp;
-          <a href="https://reddit.com/r/webvr">Reddit</a>
-        </p>
-      </div>
-    </section>
 
     <section class="section section--team">
       <div id="team" class="section__anchor"></div>
