@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://mozvr.com/">
     <meta name="theme-color" content="#fff">
-    <title>Mozilla VR</title>
+    <title>Mozilla VR | WebVR tools, standards, experiences</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/img/icon-mozvr-fox-128.png">
 
@@ -13,14 +13,14 @@
     <meta property="og:site_name" content="Mozilla VR">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mozvr.com/">
-    <meta property="og:description" content="Bringing virtual reality tools, standards, and experiences to the open Web.">
+    <meta property="og:description" content="Bringing Virtual Reality tools, WebVR standards, and experiences to the open Web.">
     <meta property="og:image" content="https://mozvr.com/assets/img/card.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mozillavr">
     <meta name="twitter:creator" content="@mozillavr">
     <meta name="twitter:title" content="Mozilla VR">
-    <meta name="twitter:description" content="Bringing virtual reality tools, standards, and experiences to the open Web.">
+    <meta name="twitter:description" content="Bringing Virtual Reality tools, WebVR standards, and experiences to the open Web.">
     <meta name="twitter:image" content="https://mozvr.com/assets/img/card.png">
   </head>
   <body>
@@ -29,8 +29,10 @@
 
       <ul>
         <li class="nav__item"><a class="no-decoration" href="#start">Getting Started</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#downloads">Downloads</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#api-and-tools">API &amp; Tools</a></li>
+        <li class="nav__item"><a class="no-decoration" href="#browsers">Browsers</a></li>
+        <li class="nav__item"><a class="no-decoration" href="#community">Community</a></li>
+        <li class="nav__item"><a class="no-decoration" href="#spec">Spec</a></li>
+        <li class="nav__item"><a class="no-decoration" href="#tools">Tools</a></li>
         <li class="nav__item"><a class="no-decoration" href="#showcase">Showcase</a></li>
         <li class="nav__item"><a class="no-decoration" href="#team">Team</a></li>
         <li class="nav__item"><a class="no-decoration" href="https://mozvr.ghost.io/">Blog</a></li>
@@ -46,14 +48,13 @@
       <section id="masthead" class="masthead section section--masthead flex flex--center">
         <div class="wrap copy--center">
           <div class="wordmark">Mozilla VR</div>
-          <h2 class="headline">Bringing virtual reality tools, standards, and experiences to the open Web.</h2>
+          <h2 class="headline">Bringing Virtual Reality tools, WebVR standards, and experiences to the open Web.</h2>
         </div>
       </section>
     </header>
 
     <div class="flex--vertical">
-      <section class="section section--start copy">
-        <div id="start" class="section__anchor"></div>
+      <section class="section section--start copy" id="start">
         <div class="wrap wrap--narrow">
           <h1>Getting Started</h1>
 
@@ -78,7 +79,7 @@
             <h3>Notes</h3>
             <ul class="bullets">
               <li>Requires a WebGL-compatible browser. The faster the phone, the better. We recommend <a href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard V2-compatible headsets</a> for best results. Tested with mobile Safari for iOS, Firefox for iOS, Firefox for Android, and Chrome for Android.</li>
-              <li>Requires iOS 9.1 or greater. The faster the iPhone, the better. Tested in mobile Safari for iOS and Firefox for iOS. We recommend <a href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard V2-compatible headsets</a> for best results with iPhones (particularly, <a href="https://www.amazon.com/View-Master-Virtual-Reality-Starter-Pack/dp/B011EG5HJ2">Mattel's View-Master VR</a>).</li>
+              <li>Requires iOS 9.1 or greater. The faster the iPhone, the better. Tested in mobile Safari for iOS and Firefox for iOS. We recommend <a href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard V2-compatible headsets</a> for best results with iPhones (particularly, <a href="https://www.amazon.com/View-Master-Virtual-Reality-Starter-Pack/dp/B011EG5HJ2">Mattel&rsquo;s View-Master VR</a>).</li>
               <li>Check latest browser support at <a href="https://iswebvrready.org">IsWebVRReady.org</a>.</li>
             </ul>
           </div>
@@ -139,53 +140,54 @@
         </div>
       </section>
 
-      <section class="section section--developers">
-        <!-- NOTE: Don't fret; this will all be updated very soon (hax!) -->
-        <div id="developers" class="section__anchor"></div>
-        <div id="downloads" class="section__anchor"></div>
-        <div id="api-and-tools" class="section__anchor"></div>
+      <section class="section section--developers" id="downloads">
         <div class="wrap">
           <h1>Downloads &amp; Development</h1>
-          <ul class="flex flex--grid flex--grid--stretch developers__list">
+          <ul class="flex flex--grid flex--grid--stretch developers__list copy copy--columns">
             <li class="flex--grid--item developers__item" id="browsers">
               <h2>Browsers</h2>
 
-              <h4><a href="https://nightly.mozilla.org/">Firefox Nightly</a></h4>
-              <p>Nightly builds of Firefox</p>
+              <h3><a href="https://nightly.mozilla.org/">Firefox Nightly</a></h3>
+              <p>Nightly builds of Firefox <small>(Maintained by Firefox/Gecko engineer, <a href="https://twitter.com/kearwoodgilbert">Kip Gilbert</a>)</small></p>
 
-              <h4><a href="https://webvr.info/get-chrome/">Chromium</a></h4>
-              <p>Experimental builds of Chromium by Google Chrome engineer, <a href="https://twitter.com/tojiro">Brandon Jones</a></p>
+              <h3><a href="https://webvr.info/get-chrome/">Chromium</a></h3>
+              <p>Experimental builds <small>(Maintained by Google Chrome engineer, <a href="https://twitter.com/tojiro">Brandon Jones</a>)</small></p>
 
-              <h4><a href="https://iswebvrready.org/">IsWebVRReady.org</a></h4>
+              <h3><a href="http://developer.samsung.com/internet#gearvr-overview">Samsung Internet for Gear VR</a></h3>
+              <p>Experimental, unstable builds <small>(Maintained by Samsung engineer, <a href="https://twitter.com/mblix">Michael Blix</a>)</small></p>
+
+              <h3><a href="https://iswebvrready.org/">IsWebVRReady.org</a></h3>
               <p>Check WebVR browser support status</p>
             </li>
             <li class="flex--grid--item developers__item" id="community">
               <h2>Community</h2>
 
-              <h4><a href="https://webvr-slack.herokuapp.com/">WebVR Slack</a></h4>
-              <h4><a href="https://mail.mozilla.org/listinfo/web-vr-discuss">WebVR mailing list</a></h4>
-              <h4><a href="https://reddit.com/r/webvr">Reddit WebVR</a></h4>
-              <p></p>
+              <ul>
+                <li><a href="https://webvr-slack.herokuapp.com/">WebVR Slack</a></li>
+                <li><a href="https://mail.mozilla.org/listinfo/web-vr-discuss">WebVR mailing list</a></li>
+                <li><a href="https://reddit.com/r/webvr">Reddit WebVR</a></li>
+              </ul>
 
-              <h2>Specification</h2>
+              <h2 id="spec">Specification</h2>
 
-              <h4><a href="https://mozvr.github.io/webvr-spec/webvr.html">WebVR API Spec</a></h4>
-              <p>The WebVR API spec</p>
+              <h3><a href="https://w3c.github.io/webvr/">WebVR API</a></h3>
+              <p>
+                Editor&rsquo;s Draft of WebVR specification
+                <small>(maintained by the <a href="https://www.w3.org/community/webvr/">W3C WebVR Community Group</a>)</small>
+              </p>
             </li>
-            <li class="flex--grid--item developers__item" id="tools">
+            <li class="flex--grid--item developers__item developers__item--aframe" id="tools">
               <h2>Tools</h2>
-              <img src="assets/img/icon-aframe.png" class="developers__icon" alt="A-Frame" title="A-Frame">
-              <h4><a href="https://aframe.io/">A-Frame</a></h4>
+              <h3><a href="https://aframe.io/" class="developers__link"> <img src="assets/img/icon-aframe.png" class="developers__icon" alt="A-Frame" title="A-Frame">A-Frame</a></h3>
               <p>WebVR content-creation framework by Mozilla</p>
 
-              <p><a href="https://aframevr-slack.herokuapp.com/">A-Frame Slack</a></p>
+              <p><a href="https://aframevr-slack.herokuapp.com/">Join the A-Frame Slack</a></p>
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="section section--showcase">
-        <div id="showcase" class="section__anchor"></div>
+      <section class="section section--showcase" id="showcase">
         <div class="wrap copy--bright">
           <h1>Showcase</h1>
 
@@ -381,8 +383,7 @@
       </div>
     </section>
 
-    <footer class="section section--footer section--thin copy copy--bright copy--center">
-      <div id="footer" class="section__anchor"></div>
+    <footer class="section section--footer section--thin copy copy--bright copy--center" id="footer">
       <div class="wrap wrap--footer">
         <a href="https://blog.mozvr.com/" class="link--blog">View Blog</a>
 

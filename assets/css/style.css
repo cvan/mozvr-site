@@ -212,12 +212,22 @@ ol {
   margin: 0 0 1.5rem 2rem;
 }
 
+.copy--columns ul,
+.copy--columns ol {
+  margin-left: 0;
+}
+
+.developers__item small {
+  color: #666;
+  display: block;
+}
+
 ul {
   list-style: none;
 }
 
-li {
-  margin: 0 0 0.5rem;
+li + li {
+  margin-top: .25rem;
 }
 
 .bullets {
@@ -347,17 +357,6 @@ li {
 
 .section {
   padding: 1.5rem 0;
-}
-
-/**
- * We place the anchors slightly above where the actual <section> starts because
- * we have to account for the height of the main nav that is obscuring the top
- * of the section. (See https://github.com/MozVR/mozvr.com/issues/17)
- */
-.section__anchor {
-  position: relative;
-  top: -3.9rem;  /* See issue #24 for making the header nav of a fixed height. */
-  visibility: hidden;
 }
 
 .wrap {
@@ -642,6 +641,16 @@ developers
 
 .section--developers h2 {
   color: #1f366c;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2rem 0 .75rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+
+.section--developers h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .developers__list {
@@ -652,11 +661,34 @@ developers
   padding: 0.75rem;
 }
 
-.developers__icon {
-  width: 90px;
-  height: 90px;
-  margin: 0 10px 0 0;
+.developers__link img {
+  opacity: .75;
+  transition: 0.1s ease-in-out;
 }
+
+.developers__link:hover img {
+  opacity: 1;
+}
+
+.developers__icon {
+  display: block;
+  margin: 0 10px 0 0;
+  height: 90px;
+  width: 90px;
+}
+
+.developers__item h3 {
+  margin: 0 0 .15rem;
+}
+
+.developers__item h3 + p {
+  margin-top: 0;
+}
+
+.developers__item--aframe p {
+  margin: .25rem 0;
+}
+
 
 /*
 team
