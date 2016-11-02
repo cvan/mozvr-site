@@ -64,6 +64,8 @@
           window.location.replace('/apainter', 'https://aframe.io/a-painter');
         } else if (pathContains('/puzzlerain')) {
           window.location.replace('/puzzlerain', '/puzzle-rain');
+        } else if (pathContains('/hyperlinks') || pathContains('/links')) {
+          redirect('https://321c4.github.io/testpages/');
         } else if (window.location.protocol !== 'file:') {
           redirect('/');
         }
