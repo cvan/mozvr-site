@@ -575,6 +575,10 @@ Showcase
   flex: 0 1 33.3333%;
 }
 
+.flex--grid--item + .flex--grid--item {
+  margin-top: 0;
+}
+
 .showcase__link {
   color: #369;
   display: block;
