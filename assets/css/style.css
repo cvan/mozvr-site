@@ -880,6 +880,10 @@ media queries
 }
 
 @media (max-width: 599px) {
+  .developers__icon {
+    margin-bottom: .75rem;
+  }
+
   .showcase__link {
     margin: 0;
   }
