@@ -575,6 +575,7 @@ Showcase
   flex: 0 1 33.3333%;
 }
 
+/* To override `margin-top` on `li + li`. */
 .flex--grid--item + .flex--grid--item {
   margin-top: 0;
 }
