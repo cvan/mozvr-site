@@ -299,6 +299,7 @@ li + li {
 .flex--grid {
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .flex--grid--stretch {
@@ -739,6 +740,9 @@ team
 }
 .person[data-person="cvan"]:before {
   background-image: url(../img/team/cvan.jpg);
+}
+.person[data-person="daosheng"]:before {
+  background-image: url(../img/team/daosheng.jpg);
 }
 .person[data-person="diego"]:before {
   background-image: url(../img/team/diego.jpg);
