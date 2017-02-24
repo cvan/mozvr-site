@@ -33,9 +33,9 @@
         <li class="nav__item"><a class="no-decoration" href="#community">Community</a></li>
         <li class="nav__item"><a class="no-decoration" href="#spec">Spec</a></li>
         <li class="nav__item"><a class="no-decoration" href="#tools">Tools</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#showcase">Showcase</a></li>
+        <li class="nav__item"><a class="no-decoration" href="https://webvr.rocks/showcase">Showcase</a></li>
         <li class="nav__item"><a class="no-decoration" href="#team">Team</a></li>
-        <li class="nav__item"><a class="no-decoration" href="https://mozvr.ghost.io/">Blog</a></li>
+        <li class="nav__item"><a class="no-decoration" href="https://blog.mozvr.com/">Blog</a></li>
       </ul>
 
       <ul class="nav-social">
@@ -80,7 +80,7 @@
             <ul class="bullets">
               <li>Requires a WebGL-compatible browser. The faster the phone, the better. We recommend <a href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard V2-compatible headsets</a> for best results. Tested with mobile Safari for iOS, Firefox for iOS, Firefox for Android, and Chrome for Android.</li>
               <li>Requires iOS 9.1 or greater. The faster the iPhone, the better. Tested in mobile Safari for iOS and Firefox for iOS. We recommend <a href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard V2-compatible headsets</a> for best results with iPhones (particularly, <a href="https://www.amazon.com/View-Master-Virtual-Reality-Starter-Pack/dp/B011EG5HJ2">Mattel&rsquo;s View-Master VR</a>).</li>
-              <li>Check latest browser support at <a href="https://iswebvrready.org">IsWebVRReady.org</a>.</li>
+              <li>Check latest browser support at <a href="https://webvr.rocks/">WebVR Rocks</a>.</li>
             </ul>
           </div>
 
@@ -98,9 +98,9 @@
             <h3>Notes</h3>
 
             <ul class="bullets">
-              <li><a href="https://github.com/Web-VR/iswebvrready/wiki/Instructions%3A-Oculus-Rift">Detailed setup instructions.</a>
+              <li><a href="https://webvr.rocks/">Detailed setup instructions.</a>
               <li>Unfortunately, Mac and Linux are not supported with the Oculus Rift and cannot be used for viewing WebVR content.</li>
-              <li>Check latest browser support at <a href="https://iswebvrready.org">IsWebVRReady.org</a>.</li>
+              <li>Check latest browser support at <a href="https://webvr.rocks/">WebVR Rocks</a>.</li>
             </ul>
           </div>
 
@@ -108,7 +108,7 @@
             <h3>Firefox Instructions</h3>
             <div class="device-instructions">
               <ol>
-                <li>Install <a href="https://nightly.mozilla.org/">Firefox Nightly</a></li>
+                <li>Install <a href="https://nightly.mozilla.org/">Firefox Nightly</a>.</li>
                 <li>Download version 1.0.2 of the <code>openvr_api.dll</code> file from the <a href="https://github.com/ValveSoftware/openvr/tree/b20b25705d8dd82be221fe68a61db36ae7e2608e">OpenVR GitHub repository</a>: <a href="https://github.com/ValveSoftware/openvr/raw/b20b25705d8dd82be221fe68a61db36ae7e2608e/bin/win32/openvr_api.dll">32-bit</a>, <a href="https://github.com/ValveSoftware/openvr/raw/b20b25705d8dd82be221fe68a61db36ae7e2608e/bin/win64/openvr_api.dll">64-bit (preferred, if running 64-bit PC)</a>.</li>
                 <li>Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it (e.g., <code>c:\openvr\</code>).</li>
                 <li>In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file (e.g., <code>c:\openvr\openvr_api.dll</code>).</li>
@@ -119,20 +119,20 @@
 
             <h3>Chromium Instructions</h3>
             <ol>
-              <li>Install <a href="https://webvr.info/get-chrome/">experimental build of Chromium</a>.
+              <li>Install <a href="https://webvr.info/get-chrome/">experimental build of Chromium</a>.</li>
               <li>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR</code> flag.</li>
-              <li>In the URL bar, load <code>chrome://flags#enable-gamepad-extensions</code> and toggle the <code>Enable Gamepad Extensions</code> flag.
+              <li>In the URL bar, load <code>chrome://flags#enable-gamepad-extensions</code> and toggle the <code>Enable Gamepad Extensions</code> flag.</li>
               <li>Launch the <a href="https://support.steampowered.com/kb_article.php?ref=5254-FJKZ-7829">SteamVR</a> application.</li>
               <li>Enjoy WebVR content!</li>
             </ol>
 
             <h3>Notes</h3>
             <ul class="bullets">
-              <li><a href="https://github.com/Web-VR/iswebvrready/wiki/Instructions%3A-HTC-Vive">Detailed setup instructions.</a>
+              <li><a href="https://github.com/Web-VR/iswebvrready/wiki/Instructions%3A-HTC-Vive">Detailed setup instructions.</a></li>
               <li>It is recommended that you start with a clean profile by <a href="https://support.mozilla.org/en-US/kb/refresh-firefox-reset-add-ons-and-settings">refreshing Firefox</a>. Some preference adjustments needed for earlier WebVR builds will cause problems with the current Nightly build.</li>
               <li>Vive controller support is coming soon to Firefox.</li>
               <li>To test if it works, try some of the <a href="https://webvr.info/samples/">WebVR 1.0 examples</a> or sites such as <a href="https://sketchfab.com/">SketchFab</a> that support room-scale WebVR. To make your own WebVR sites, check out <a href="https://aframe.io">A-Frame</a>, <a href="https://threejs.org">three.js</a>, or the <a href="https://w3c.github.io/webvr/">WebVR 1.0 Spec</a> for details.</li>
-              <li>Check latest browser support at <a href="https://iswebvrready.org">IsWebVRReady.org</a>.</li>
+              <li>Check latest browser support at <a href="https://webvr.rocks/">WebVR Rocks</a>.</li>
             </ul>
           </div>
 
@@ -185,144 +185,6 @@
           </ul>
         </div>
       </section>
-
-      <section class="section section--showcase" id="showcase">
-        <div class="wrap copy--bright">
-          <h1>Showcase</h1>
-
-          <div class="vrEnabled">
-            <p class="copy--center copy--big">
-              <em>Your browser is VR enabled!</em><br>
-              <span class="copy--subtitle">Check out these sites</span>
-            </p>
-          </div>
-
-          <ul class="flex flex--grid flex--grid--stretch showcase__grid">
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="puzzlerain">
-              <a class="showcase__link no-decoration" href="https://mozvr.com/puzzle-rain/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/puzzlerain.jpg)"></div>
-
-                <h3 class="showcase__title">Puzzle Rain</h3>
-                <p class="showcase__author">Mozilla VR &amp; Arturo Paracuellos</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="secvrity">
-              <a class="showcase__link no-decoration" href="demos/SECVRITY/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/secvrity.png)"></div>
-
-                <h3 class="showcase__title">SECVRITY</h3>
-                <p class="showcase__author">Boondogl</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="waytogo">
-              <a class="showcase__link no-decoration" href="http://a-way-to-go.com">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/waytogo.png)"></div>
-
-                <h3 class="showcase__title">Way to Go</h3>
-                <p class="showcase__author">National Film Board of Canada</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="spacelamb">
-              <a class="showcase__link no-decoration" href="http://m.spacelamb.12wave.com">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/spacelamb.png)"></div>
-
-                <h3 class="showcase__title">Space Lamb</h3>
-                <p class="showcase__author">12Wave</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="videosphere">
-              <a class="showcase__link no-decoration" href="https://aframe.io/examples/showcase/videosphere/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/360video.png)"></div>
-
-                <h3 class="showcase__title">360&deg; Video Boilerplate</h3>
-                <p class="showcase__author">A-Frame team</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="shopping">
-              <a class="showcase__link no-decoration" href="https://aframe.io/examples/showcase/shopping/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/shopping.png)"></div>
-
-                <h3 class="showcase__title">Shopping</h3>
-                <p class="showcase__author">A-Frame team</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="livyatanim">
-              <a class="showcase__link no-decoration" href="http://film.livyatanim.com/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/livyatanim.png)"></div>
-
-                <h3 class="showcase__title">LIVYATANIM: Myth</h3>
-                <p class="showcase__author">Or Fleisher</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item desktop" data-showcase-slug="monkeys">
-              <a class="showcase__link no-decoration" href="http://monkeys.hypernom.com/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/monkeys.png)"></div>
-
-                <h3 class="showcase__title">Monkeys</h3>
-                <p class="showcase__author">Vi Hart</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="panorama">
-              <a class="showcase__link no-decoration" href="https://mozvr.github.io/panorama-viewer/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/panorama.png)"></div>
-
-                <h3 class="showcase__title">Panorama Viewer</h3>
-
-                <p class="showcase__author">MozVR team</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item desktop" data-showcase-slug="rainbowmembrane">
-              <a class="showcase__link no-decoration" href="http://cabbi.bo/RainbowMembrane/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/rainbowmembrane.png)"></div>
-
-                <h3 class="showcase__title">Rainbow Membrane</h3>
-
-                <p class="showcase__author">Cabbibo</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="sechelt">
-              <a class="showcase__link no-decoration" href="https://mozvr.github.io/sechelt/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/sechelt.png)"></div>
-
-                <h3 class="showcase__title">Sechelt</h3>
-
-                <p class="showcase__author">MozVR team</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="polarsea">
-              <a class="showcase__link no-decoration" href="demos/polarsea/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/polarsea.png)"></div>
-
-                <h3 class="showcase__title">The Polar Sea</h3>
-
-                <p class="showcase__author">Deep Inc.</p>
-              </a>
-            </li>
-
-            <li class="flex flex--grid--item showcase__item" data-showcase-slug="inspirit">
-              <a class="showcase__link no-decoration" href="http://inspirit.unboring.net/">
-                <div class="showcase__image" style="background-image: url(assets/img/showcase/inspirit.png)"></div>
-
-                <h3 class="showcase__title">Inspirit</h3>
-
-                <p class="showcase__author">Arturo Paracuellos</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
     </div>
 
     <section class="section section--team">
