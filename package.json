@@ -9,7 +9,7 @@
   "bugs": {
     "url": "https://github.com/MozVR/mozvr-site/issues"
   },
-  "homepage": "http://mozvr.com/",
+  "homepage": "https://vr.mozilla.org/",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "ghpages": "^0.0.8",
