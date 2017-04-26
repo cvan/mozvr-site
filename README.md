@@ -1,6 +1,6 @@
 # Mozilla VR Site
 
-Source for Mozilla VR site: __http://mozvr.com/__
+Source for Mozilla VR site: __https://vr.mozilla.org/__
 
 
 ## Installation
