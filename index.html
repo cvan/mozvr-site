@@ -3,10 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mozilla VR • WebVR tools, standards, experiences</title>
+
     <link rel="canonical" href="https://vr.mozilla.org/">
     <meta name="theme-color" content="#fff">
-    <title>Mozilla VR | WebVR tools, standards, experiences</title>
+
+    <link rel="stylesheet" href="assets/css/tachyons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
     <link rel="icon" href="assets/img/icon-mozvr-fox-128.png">
 
     <meta property="og:title" content="Mozilla VR">
@@ -20,170 +24,102 @@
     <meta name="twitter:site" content="@mozillavr">
     <meta name="twitter:creator" content="@mozillavr">
   </head>
-  <body>
-    <nav id="nav" class="nav">
-      <a href="#top" class="nav__top no-decoration">Mozilla VR</a>
-
-      <ul>
-        <li class="nav__item"><a class="no-decoration" href="#start">Getting Started</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#browsers">Browsers</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#community">Community</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#spec">Spec</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#tools">Tools</a></li>
-        <li class="nav__item"><a class="no-decoration" href="https://webvr.rocks/showcase">Showcase</a></li>
-        <li class="nav__item"><a class="no-decoration" href="#team">Team</a></li>
-        <li class="nav__item"><a class="no-decoration" href="https://blog.mozvr.com/">Blog</a></li>
-      </ul>
-
-      <ul class="nav-social">
-        <li class="nav-social--item social--item"><a href="https://twitter.com/mozillavr" class="social__link social__link--twitter link--borderless"><img class="icon icon--social" src="assets/img/icon-twitter-white.svg" alt="Twitter" title="Twitter" height="17"></a></li>
-        <li class="nav-social--item social--item"><a href="https://github.com/MozVR" class="social__link social__link--github link--borderless"><img class="icon icon--social" src="assets/img/icon-github-white.svg" alt="GitHub" title="GitHub" height="17"></a></li>
-      </ul>
+  <body class="bg-black white-70">
+    <nav id="nav" class="nav flex justify-between bb b--white-10">
+      <h1 class="flex">
+        <a class="link white-70 hover-white no-underline pa3 o-70 glow logo mozilla-wordmark" href="/">Mozilla</a>
+        <a class="link white-70 hover-white no-underline pa3 o-90 glow w3 logo mozillavr-logo" href="/">VR</a>
+      </h1>
+      <div class="flex-grow pa3 flex items-center">
+        <a class="f6 link dib white dim mr3 mr4-ns hover-cyan" href="#about">About Mozilla VR</a>
+        <a class="f6 link dib white dim mr3 mr4-ns hover-light-green" href="#oss">Open-Source Software</a>
+        <a class="f6 link dib white dim mr3 mr4-ns" href="#community">Community</a>
+        <a class="f6 link dib white dim mr3 mr4-ns" href="#blog">Blog</a>
+        <a class="f6 link dib white dim mr3 mr4-ns" href="#events">Events</a>
+        <a class="f6 link dib white dim mr3 mr3-ns" href="#contact">Contact</a>
+        <menu id="social" class="social tc-l bg-center">
+          <div class="w-100 ph3">
+            <a class="inline-flex items-center f6 dib white bg-animate hover-bg-white hover-black no-underline pv2 ph4 ba b--white-20" href="https://twitter.com/mozillavr" title="@MozillaVR on Twitter">
+              <svg class="dib h1 w1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg>
+              <span class="ml3"><strong class="b-ns pr1-ns">@MozillaVR</strong><span class="o-70"> on Twitter</span></span>
+            </a>
+          </div>
+        </menu>
+      </div>
     </nav>
 
-    <header id="header" class="header">
-      <section id="masthead" class="masthead section section--masthead flex flex--center">
-        <div class="wrap copy--center">
-          <div class="wordmark">Mozilla VR</div>
-          <h2 class="headline">Bringing Virtual Reality tools, WebVR standards, and experiences to the open Web.</h2>
-        </div>
-      </section>
+    <header id="about" class="about bg-dark-gray pa3 pa5-ns" data-section="nav">
+      <div class="mw8 center">
+        <section class="about-copy pt4-l pb4-l pt3-ns pb3-ns">
+          <h1 class="ttu f4 fw4 tracked bb b--white-90 bw2 pb3"><span class="mozilla o-90">Mozilla </span><span class="vr o-90">VR</span></h1>
+          <p class="slogan f2 lh-title pt4 mw6 mb0"><span class="fw4 white-90">We make tools for creating Virtual Reality in your web browser today.</span> <span class="slogan-secondary db pt3 white-90 o-50 f4">You make the realities of tomorrow.</span></p>
+        </section>
+      </div>
     </header>
 
-    <div class="flex--vertical">
-      <section class="section section--start copy" id="start">
-        <div class="wrap wrap--narrow">
-          <h1>Getting Started</h1>
-
-          <menu class="copy--bright c menu">
-            <ul>
-              <li class="menu__item"><a class="no-decoration" href="#mobile">Mobile</a>
-              <li class="menu__item"><a class="no-decoration" href="#rift">Oculus Rift</a>
-              <li class="menu__item"><a class="no-decoration" href="#vive">HTC Vive</a>
-            </ul>
-          </menu>
-
-          <div id="mobile" class="menu__copy">
-            <h3>Instructions</h3>
-            <div class="device-instructions">
-              <ol>
-                <li>Load a WebVR site in a browser.</li>
-                <li>Hold up your phone and move it around to look, or touch-and-drag to rotate.</li>
-                <li>Tap the "VR" icon button, and insert your phone into a <a href="https://vr.google.com/cardboard/">Cardboard</a> <a href="https://vr.google.com/cardboard/get-cardboard/">holder</a>.</li>
-              </ol>
-            </div>
-
-            <h3>Notes</h3>
-            <ul class="bullets">
-              <li>Requires a WebGL-compatible browser. The faster the phone, the better. We recommend <a href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard V2-compatible headsets</a> for best results. Tested with mobile Safari for iOS, Firefox for iOS, Firefox for Android, and Chrome for Android.</li>
-              <li>Requires iOS 9.1 or greater. The faster the iPhone, the better. Tested in mobile Safari for iOS and Firefox for iOS. We recommend <a href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard V2-compatible headsets</a> for best results with iPhones (particularly, <a href="https://www.amazon.com/View-Master-Virtual-Reality-Starter-Pack/dp/B011EG5HJ2">Mattel&rsquo;s View-Master VR</a>).</li>
-              <li>Check latest browser support at <a href="https://webvr.rocks/">WebVR Rocks</a>.</li>
-            </ul>
-          </div>
-
-          <div id="rift" class="menu__copy">
-            <h3>Instructions</h3>
-            <div class="device-instructions">
-              <ol>
-                <li>Install the latest <a href="https://developer.oculus.com/downloads/">Oculus Rift runtime</a>.</li>
-                <li>Install <a href="https://nightly.mozilla.org/">Firefox Nightly</a> or <a href="https://webvr.info/get-chrome/">experimental builds of Chromium</a>.</li>
-                <li>Ensure that your Oculus Home settings allow for <a href="https://blog.mozvr.com/oculus-home-rift-cv1-webvr/#enablingunknownsources">Unknown Sources</a>.</li>
-                <li>Enjoy WebVR content!</li>
-              </ol>
-            </div>
-
-            <h3>Notes</h3>
-
-            <ul class="bullets">
-              <li><a href="https://webvr.rocks/">Detailed setup instructions.</a>
-              <li>Unfortunately, Mac and Linux are not supported with the Oculus Rift and cannot be used for viewing WebVR content.</li>
-              <li>Check latest browser support at <a href="https://webvr.rocks/">WebVR Rocks</a>.</li>
-            </ul>
-          </div>
-
-          <div id="vive" class="menu__copy">
-            <h3>Firefox Instructions</h3>
-            <div class="device-instructions">
-              <ol>
-                <li>Install <a href="https://nightly.mozilla.org/">Firefox Nightly</a>.</li>
-                <li>Download version 1.0.6 of the OpenVR API, <code>openvr_api.dll</code>, from the <a href="https://github.com/ValveSoftware/openvr/tree/v1.0.6/bin/">OpenVR GitHub repository</a>: <a href="https://github.com/ValveSoftware/openvr/blob/v1.0.6/bin/win32/openvr_api.dll">32-bit</a>, <a href="https://github.com/ValveSoftware/openvr/blob/v1.0.6/bin/win64/openvr_api.dll">64-bit (preferred, if running 64-bit PC)</a>.</li>
-                <li>Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it (e.g., <code>c:\openvr\</code>).</li>
-                <li>In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file (e.g., <code>c:\openvr\openvr_api.dll</code>).</li>
-                <li>Restart Firefox Nightly.</li>
-                <li>Enjoy WebVR content!</li>
-              </ol>
-            </div>
-
-            <h3>Chromium Instructions</h3>
-            <ol>
-              <li>Install <a href="https://webvr.info/get-chrome/">experimental build of Chromium</a>.</li>
-              <li>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR</code> flag.</li>
-              <li>In the URL bar, load <code>chrome://flags#enable-gamepad-extensions</code> and toggle the <code>Enable Gamepad Extensions</code> flag.</li>
-              <li>Launch the <a href="https://support.steampowered.com/kb_article.php?ref=5254-FJKZ-7829">SteamVR</a> application.</li>
-              <li>Enjoy WebVR content!</li>
-            </ol>
-
-            <h3>Notes</h3>
-            <ul class="bullets">
-              <li><a href="https://github.com/Web-VR/iswebvrready/wiki/Instructions%3A-HTC-Vive">Detailed setup instructions.</a></li>
-              <li>It is recommended that you start with a clean profile by <a href="https://support.mozilla.org/en-US/kb/refresh-firefox-reset-add-ons-and-settings">refreshing Firefox</a>. Some preference adjustments needed for earlier WebVR builds will cause problems with the current Nightly build.</li>
-              <li>Vive controller support is coming soon to Firefox.</li>
-              <li>To test if it works, try some of the <a href="https://webvr.info/samples/">WebVR 1.0 examples</a> or sites such as <a href="https://sketchfab.com/">SketchFab</a> that support room-scale WebVR. To make your own WebVR sites, check out <a href="https://aframe.io">A-Frame</a>, <a href="https://threejs.org">three.js</a>, or the <a href="https://w3c.github.io/webvr/">WebVR 1.0 Spec</a> for details.</li>
-              <li>Check latest browser support at <a href="https://webvr.rocks/">WebVR Rocks</a>.</li>
-            </ul>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="section section--developers" id="downloads">
-        <div class="wrap">
-          <h1>Downloads &amp; Development</h1>
-          <ul class="flex flex--grid flex--grid--stretch developers__list copy copy--columns">
-            <li class="flex--grid--item developers__item" id="browsers">
-              <h2>Browsers</h2>
-
-              <h3><a href="https://nightly.mozilla.org/">Firefox Nightly</a></h3>
-              <p>Nightly builds of Firefox <small>(Maintained by Firefox engineer, <a href="https://twitter.com/kearwoodgilbert">Kip Gilbert</a>)</small></p>
-
-              <h3><a href="https://webvr.info/get-chrome/">Chromium</a></h3>
-              <p>Experimental builds <small>(Maintained by Google Chrome engineer, <a href="https://twitter.com/tojiro">Brandon Jones</a>)</small></p>
-
-              <h3><a href="http://developer.samsung.com/internet#gearvr-overview">Samsung Internet for Gear VR</a></h3>
-              <p>Experimental builds <small>(Maintained by <a href="https://twitter.com/samsunginternet">Samsung Internet</a>)</small></p>
-
-              <h3><a href="https://webvr.rocks/">WebVR Rocks</a></h3>
-              <p>Community resource for WebVR browser support, headset info, and articles on content creation</p>
+    <section id="oss" data-section="oss" class="tl pa3 pa5-ns bg-light-green black">
+      <div class="mw8 center">
+        <h2 class="f2 fw6 bt b-dark-green-90 bw2 black-90 pt4 pb4 dark-green">Open-Source Software</h2>
+        <section class="pt2">
+          <ul class="cf">
+            <li data-slug="a-frame" class="fl w-100 w-50-m w-25-l">
+              <a href="https://aframe.io" class="outline-0 pa3 ba bw1 b--black-30">
+                <h3 class="f4 fw6">A-Frame</h3>
+                <p class="fw2 o-90 pb2">A web framework for creating VR using HTML &amp; JavaScript.</p>
+                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive, Rift, Daydream, Gear VR, and Cardboard.</p>
+              </a>
             </li>
-            <li class="flex--grid--item developers__item" id="community">
-              <h2>Community</h2>
-
-              <ul>
-                <li><a href="https://webvr-slack.herokuapp.com/">WebVR Slack</a></li>
-                <li><a href="https://mail.mozilla.org/listinfo/web-vr-discuss">WebVR mailing list</a></li>
-                <li><a href="https://reddit.com/r/webvr">Reddit WebVR</a></li>
-              </ul>
-
-              <h2 id="spec">Specification</h2>
-
-              <h3><a href="https://w3c.github.io/webvr/">WebVR API</a></h3>
-              <p>
-                Editor&rsquo;s Draft of WebVR specification
-                <small>(maintained by the <a href="https://www.w3.org/community/webvr/">W3C WebVR Community Group</a>)</small>
-              </p>
+            <li data-slug="firefox" class="fl w-100 w-50-m w-25-l">
+              <a href="https://webvr.rocks/firefox" class="outline-0 pa3 ba bw1 b--black-30">
+                <h3 class="f4 fw6">Firefox</h3>
+                <p class="fw2 o-90 pb2">A web browser for experiencing WebVR.</p>
+                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports WebVR API <span class="api-version o-60">(v1.1)</span><!-- https://w3c.github.io/webvr/spec/1.1/ -->.</p>
+              </a>
             </li>
-            <li class="flex--grid--item developers__item developers__item--aframe" id="tools">
-              <h2>Tools</h2>
-              <h3><a href="https://aframe.io/" class="developers__link"> <img src="assets/img/icon-aframe.png" class="developers__icon" alt="A-Frame" title="A-Frame">A-Frame</a></h3>
-              <p>WebVR content-creation framework by Mozilla</p>
-
-              <p><a href="https://aframevr-slack.herokuapp.com/">Join the A-Frame Slack</a></p>
+            <li data-slug="servo" class="fl w-100 w-50-m w-25-l">
+              <a href="https://webvr.rocks/servo" class="outline-0 pa3 ba bw1 b--black-30">
+                <h3 class="fw4 fw6">Servo</h3>
+                <p class="fw2 o-90 pb2">A next-gen parallelized, embedded browser engine.</p>
+                <p class="fw2 f6 o-70 mb0 b--black-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports WebVR API <span class="api-version o-60">(v1.2)</span>.</p>
+              </a>
             </li>
           </ul>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </section>
 
+    <section id="community" data-section="community" class="tl pa3 pa5-ns bg-white black">
+      <div class="mw8 center">
+        <h2 class="f2 fw6 bt b--black-90 bw2 black-90 pt4 pb4">Community</h2>
+        <section class="pt2">
+          <ul class="cf">
+            <li data-slug="a-frame" class="fl w-100 w-50-m w-25-l">
+              <a href="https://aframe.io" class="outline-0">
+                <h3 class="f4 fw6">A-Frame</h3>
+                <p class="fw2 o-90">A web framework for creating VR using HTML &amp; JavaScript.</p>
+                <p class="fw2 f6 o-70">Supports Vive, Rift, Daydream, Gear VR, and Cardboard.</p>
+              </a>
+            </li>
+            <li data-slug="firefox" class="fl w-100 w-50-m w-25-l">
+              <a href="https://webvr.rocks/firefox" class="outline-0">
+                <h3 class="f4 fw6">Firefox</h3>
+                <p class="fw2 o-90">A web browser for experiencing WebVR.</p>
+                <p class="fw2 f6 o-70">Supports WebVR API <span class="api-version o-60">(v1.1)</span><!-- https://w3c.github.io/webvr/spec/1.1/ -->.</p>
+              </a>
+            </li>
+            <li data-slug="servo" class="fl w-100 w-50-m w-25-l">
+              <a href="https://webvr.rocks/servo" class="outline-0">
+                <h3 class="fw4 fw6">Servo</h3>
+                <p class="fw2 o-90">A next-gen parallelized, embedded browser engine.</p>
+                <p class="fw2 f6 o-70">Supports WebVR API <span class="api-version o-60">(v1.2)</span>.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <!--
     <section class="section section--team">
       <div id="team" class="section__anchor"></div>
       <div class="wrap section--showcase__wrap">
@@ -274,6 +210,7 @@
         </p>
       </div>
     </footer>
+    -->
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/ga.js"></script>
