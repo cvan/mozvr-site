@@ -25,15 +25,16 @@
     <meta name="twitter:creator" content="@mozillavr">
   </head>
   <body class="bg-black white-70">
+      <div class="mw8 center">
     <nav id="nav" class="nav flex justify-between bb b--white-10">
       <h1 class="flex">
-        <a class="link white-70 hover-white no-underline pa3 o-70 glow logo mozilla-wordmark" href="/">Mozilla</a>
-        <a class="link white-70 hover-white no-underline pa3 o-90 glow w3 logo mozillavr-logo" href="/">VR</a>
+        <a class="link white-70 hover-white no-underline pa3 nl3 nt3 o-70 glow logo mozilla-wordmark" href="/">Mozilla</a>
+        <a class="link white-70 hover-white no-underline pa3 nt3 o-90 glow w3 logo mozillavr-logo" href="/">VR</a>
       </h1>
-      <div class="flex-grow pa3 flex items-center">
+      <div class="pa3 flex items-center nr4">
         <a class="f6 link dib white dim mr3 mr4-ns hover-cyan" href="#about">About Mozilla VR</a>
-        <a class="f6 link dib white dim mr3 mr4-ns hover-light-green" href="#oss">Open-Source Software</a>
-        <a class="f6 link dib white dim mr3 mr4-ns" href="#community">Community</a>
+        <a class="f6 link dib white dim mr3 mr4-ns hover-light-green" href="#oss">Open-Source</a>
+        <a class="f6 link dib white dim mr3 mr4-ns hover-light-blue" href="#community">Community</a>
         <a class="f6 link dib white dim mr3 mr4-ns" href="#blog">Blog</a>
         <a class="f6 link dib white dim mr3 mr4-ns" href="#events">Events</a>
         <a class="f6 link dib white dim mr3 mr3-ns" href="#contact">Contact</a>
@@ -47,6 +48,7 @@
         </menu>
       </div>
     </nav>
+      </div>
 
     <header id="about" class="about bg-dark-gray pa3 pa5-ns" data-section="nav">
       <div class="mw8 center">
@@ -61,26 +63,26 @@
       <div class="mw8 center">
         <h2 class="f2 fw6 bt b-dark-green-90 bw2 black-90 pt4 pb4 dark-green">Open-Source Software</h2>
         <section class="pt2">
-          <ul class="cf">
-            <li data-slug="a-frame" class="fl w-100 w-50-m w-25-l">
-              <a href="https://aframe.io" class="outline-0 pa3 ba bw1 b--black-30">
+          <ul class="flex-ns flex-wrap-ns flex-row-ns content-stretch space-between items-stretch nt2 nl2">
+            <li data-slug="a-frame" class="w-25-l w-third-ns w-50-m pa2">
+              <a href="https://aframe.io" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
                 <h3 class="f4 fw6">A-Frame</h3>
                 <p class="fw2 o-90 pb2">A web framework for creating VR using HTML &amp; JavaScript.</p>
                 <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive, Rift, Daydream, Gear VR, and Cardboard.</p>
               </a>
             </li>
-            <li data-slug="firefox" class="fl w-100 w-50-m w-25-l">
-              <a href="https://webvr.rocks/firefox" class="outline-0 pa3 ba bw1 b--black-30">
+            <li data-slug="firefox" class="w-25-l w-third-ns w-50-m pa2">
+              <a href="https://webvr.rocks/firefox" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
                 <h3 class="f4 fw6">Firefox</h3>
-                <p class="fw2 o-90 pb2">A web browser for experiencing WebVR.</p>
-                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports WebVR API <span class="api-version o-60">(v1.1)</span><!-- https://w3c.github.io/webvr/spec/1.1/ -->.</p>
+                <p class="fw2 o-90 pb2">A desktop web browser for experiencing WebVR sites.</p>
+                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive, Rift on Windows for WebVR API <span class="api-version o-60">(v1.1)</span><!-- https://w3c.github.io/webvr/spec/1.1/ -->.</p>
               </a>
             </li>
-            <li data-slug="servo" class="fl w-100 w-50-m w-25-l">
-              <a href="https://webvr.rocks/servo" class="outline-0 pa3 ba bw1 b--black-30">
+            <li data-slug="servo" class="w-25-l w-third-ns w-50-m pa2">
+              <a href="https://webvr.rocks/servo" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
                 <h3 class="fw4 fw6">Servo</h3>
-                <p class="fw2 o-90 pb2">A next-gen parallelized, embedded browser engine.</p>
-                <p class="fw2 f6 o-70 mb0 b--black-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports WebVR API <span class="api-version o-60">(v1.2)</span>.</p>
+                <p class="fw2 o-90 pb2">A next-generation parallelized, embedded browser engine.</p>
+                <p class="fw2 f6 o-70 mb0 b--black-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive on Windows for WebVR API <span class="api-version o-60">(v1.2)</span>.</p>
               </a>
             </li>
           </ul>
@@ -88,9 +90,10 @@
       </div>
     </section>
 
-    <section id="community" data-section="community" class="tl pa3 pa5-ns bg-white black">
+    <section id="community" data-section="community" class="tl pa3 pa5-ns bg-dark-blue light-blue">
       <div class="mw8 center">
-        <h2 class="f2 fw6 bt b--black-90 bw2 black-90 pt4 pb4">Community</h2>
+        <h2 class="f2 fw6 bt b--lightest-blue bw2 lightest-blue o-90 pt4 pb4">Community</h2>
+        <p>This is information about the Mozilla VR and WebVR communities.</p>
         <section class="pt2">
           <ul class="cf">
             <li data-slug="a-frame" class="fl w-100 w-50-m w-25-l">
