@@ -253,10 +253,15 @@ media queries
   color: #333;
   display: block;
   font-weight: bold;
-  min-height: 13.1rem;
+  outline-width: 0 !important;
+  /*min-height: 13.1rem;*/
   opacity: .9;
   text-decoration: none;
   width: 100%;
+}
+
+[data-section~="oss"] [data-slug] a h3 + p {
+  min-height: 5rem;
 }
 
 .lh-copy li {
