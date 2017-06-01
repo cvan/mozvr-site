@@ -22,7 +22,7 @@
     "start": "npm run dev",
     "dev": "http-server -c-1 -p 9090",
     "build": "mkdirp _build/assets/css/ && postcss --use autoprefixer assets/css/style.css -d _build/assets/css/ --browsers 'last 10 versions' --map --no-cascade",
-    "prod": "npm run build && mkdirp _prod && cp -r {.nojekyll,CNAME,assets,demos,*.html,showcase} _prod/. 2>/dev/null || : && cp -r _build/* _prod/. && node scripts/generate-redirects.js",
+    "prod": "npm run build && mkdirp _prod && cp -r {.nojekyll,CNAME,aframe,assets,demos,*.html,showcase} _prod/. 2>/dev/null || : && cp -r _build/* _prod/. && node scripts/generate-redirects.js",
     "preghpages": "npm run prod",
     "ghpages": "GHPAGES_REPO='mozvr/mozvr.github.io' ghpages",
     "gh-pages": "npm run ghpages",
