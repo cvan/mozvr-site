@@ -1,0 +1,385 @@
+<!doctype html>
+<html data-index>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A-Frame by Mozilla VR • Make WebVR using HTML and JavaScript</title>
+
+    <link rel="canonical" href="https://vr.mozilla.org/">
+    <meta name="theme-color" content="#ef2d5e">
+
+    <link rel="stylesheet" href="assets/css/tachyons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="assets/img/aframe-sticker-diecut.svg">
+
+    <meta name="robots" content="none">
+    <meta name="description" content="A-Frame is a free, open-source framework for making Virtual Reality on the Web using HTML and JavaScript. Brought to you by Mozilla VR.">
+    <meta name="keywords" content="webvr,webvr framework,webvr demos,webvr sites,vr javascript,vr framework">
+
+    <meta property="og:title" content="A-Frame">
+    <meta property="og:site_name" content="A-Frame">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aframe.io/">
+    <meta property="og:description" content="A-Frame is a free, open-source framework for making Virtual Reality on the Web using HTML and JavaScript. Brought to you by Mozilla VR.">
+    <meta property="og:image" content="https://aframe.io/images/card.jpg">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@aframevr">
+    <meta name="twitter:creator" content="@aframevr">
+    <meta name="twitter:title" content="A-Frame: Make WebVR using HTML and JavaScript. Brought to you by Mozilla VR.">
+
+    <meta property="fb:app_id" content="1535794316743373">
+  </head>
+  <body class="white-70">
+    <!-- <div class="mw8 center"> -->
+      <!-- <nav id="nav" class="nav flex justify-between bb b--white-10"> -->
+        <!--
+        <h1 class="flex">
+          <a class="self-center link white-70 hover-white no-underline nl3 pt3 nb2 top-0 mo-70 glow logo mozilla-wordmark" href="/">Mozilla</a>
+          <a class="self-center link white-70 hover-white no-underline pt3 nb2 mo-90 top-0 glow w3 logo mozillavr-logo" href="/">VR</a>
+        </h1>
+        -->
+        <!--
+        <div class="pa3 flex items-center nr4">
+          <a class="f6 link dib white dim mr3 mr4-ns hover-cyan" href="/aframe/docs">Docs</a>
+          <a class="f6 link dib white dim mr3 mr4-ns" href="/aframe/templates">Templates</a>
+          <a class="f6 link dib white dim mr3 mr4-ns" href="/aframe/components">Components</a>
+          <a class="f6 link dib white dim mr3 mr4-ns hover-light-green" href="/aframe/showcase">Showcase</a>
+          <a class="f6 link dib white dim mr3 mr4-ns hover-light-blue" href="/aframe/blog">Blog</a>
+          <a class="f6 link dib white dim mr3 mr4-ns hover-light-blue" href="/aframe/community">Get Involved</a>
+          <a class="f6 link dib white dim mr3 mr3-ns" href="/aframe/downloads">Downloads</a>
+          <a class="f6 link dib white dim mr3 mr3-ns" href="/aframe/chat">Chat</a>
+          <menu id="social" class="social tc-l bg-center">
+            <div class="w-100 ph3">
+              <a class="inline-flex items-center f6 dib white bg-animate hover-bg-white hover-black no-underline pv2 ph3 ba b--white-20" href="https://twitter.com/mozillavr" title="@MozillaVR on Twitter">
+                <svg class="dib h1 w1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg>
+                <span class="ml2"><strong class="b-ns pl1 pr1-ns">@MozillaVR</strong><span class="o-70"> on Twitter</span></span>
+              </a>
+            </div>
+          </menu>
+          -->
+
+    <header class="w-100 pa3 ph5-ns bg-white">
+      <div class="db dt-ns mw9 center w-100">
+        <div class="db dtc-ns v-mid tl w-20 pr1">
+          <a href="/" class="dib f5 f4-ns fw6 mt0 mb1 link black-70 nowrap" title="Home">
+            A-Frame
+            <div class="dib">
+              <small class="nowrap f6 mt2 mt3-ns pr2 black-70 fw2">v0.5.0</small>
+            </div>
+          </a>
+        </div>
+        <nav class="db dtc-ns v-mid w-100 tr-ns mt2 mt0-ns">
+          <a title="Docs" href="/aframe/docs/"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+            Docs
+          </a>
+          <a title="Templates" href="/aframe/templates/"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+            Templates
+          </a>
+          <a title="Components" href="/aframe/components"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+            Components
+          </a>
+          <a title="Showcase of projects made with A-Frame" href="/aframe/showcase"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+            Showcase
+          </a>
+          <a title="Download A-Frame" href="/aframe/downloads"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+            Downloads
+          </a>
+          <a title="A-Frame Blog" href="/aframe/blog"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib-l">
+            Blog
+          </a>
+          <a title="Get Involved" href="/aframe/get-involved"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+            Get Involved
+          </a>
+          <a title="Tachyons on GitHub" href="https://github.com/aframevr/aframe"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib dib-l">
+            GitHub
+          </a>
+          <!--
+          <a title="Tachyons on GitHub" href="http://github.com/tachyons-css/tachyons/"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dn dib-l">
+            Slack
+          </a>
+          <a title="Tachyons on GitHub" href="http://github.com/tachyons-css/tachyons/"
+              class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dn dib-l">
+            Twitter
+          </a>
+          -->
+        </nav>
+      </div>
+    </header>
+
+    <main class="w-100 bt b--black-10 bg-white">
+      <section class="bg-black-0125 w-100">
+        <article>
+          <header class="ph3 ph5-ns w-100 bg-transparent pv3 mb5-ns bb b--black-10 overflow-auto nb1-ns">
+            <div class="nowrap mw9 center">
+              <a title="Getting Started" href="#getting-started"
+                  class="pv1-ns f6 fw6 dim link black-70 mr2 mr3-m mr4-l dib">
+                Demo
+              </a>
+              <a title="Principles" href="#principles"
+                  class="pv1-ns f6 fw6 dim link black-70 mr1 mr3-m mr4-l dib">
+                Get Started
+              </a>
+              <a title="Features" href="#features"
+                  class="pv1-ns f6 fw6 dim link black-70 mr1 mr3-m mr4-l dib">
+                Features
+              </a>
+              <a title="A-Frame in the Wild" href="#in_the_wild"
+                  class="pv1-ns f6 fw6 dim link black-70 mr1 mr3-m mr4-l dib">
+                A-Frame in the Wild
+              </a>
+              <a title="FAQ" href="#faq"
+                  class="pv1-ns f6 fw6 dim link black-70 mr1 mr3-m mr4-l dib">
+                FAQ
+              </a>
+              <!--
+              <a title="Supported VR Headsets &amp; Browsers" href="#compatibility"
+                  class="pv1-ns f6 fw6 dim link black-70 mr1 mr3-m mr4-l dib">
+                Supported VR Headsets &amp; Browsers
+              </a>
+              <a title="Show Your Creations" href="https://aframe.io/docs/0.5.0/introduction/hosting-and-publishing.html"
+                  class="pv1-ns f6 fw6 dim link black-70 mr1 mr3-m mr4-l dib">
+                Show Your Creations
+              </a>
+              -->
+            </div>
+          </header>
+          <div class="pv3 ph3 ph5-ns">
+            <div class="cf mw9 center tc-m flex-l pv4-l">
+              <!--
+              <div class="fl w-100 overflow-auto v-top">
+                <iframe src="https://ghbtns.com/github-btn.html?user=aframevr&repo=aframe&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="32px"></iframe>
+                <a href="https://twitter.com/intent/tweet?text=A-Frame: Make WebVR using HTML and JavaScript. Brought to you by Mozilla VR @mozillavr.url=https://aframe.io/" class="twitter bg-white-50 link dib ba br2 ph2 pt1 pb1 lh-solid v-top" style="background-color: #55acee">
+                  <svg class="geomicon dib v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="#fff">
+                    <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"/>
+                  </svg>
+                  <span class="dib v-mid white fw6 pl1" style="font-size: .85rem">Tweet</span>
+                </a>
+              </div>
+              -->
+              <div class="pb3 pb3-ns black-70 fl-l w-60-l">
+                <h1 class="f3 fw6 f2-ns pt3-ns lh-title measure mt0">
+                  Make a VR world in 10 lines of HTML code!
+                </h1>
+                <p class="f5 f4-ns fw4 b measure dib-m lh-copy mw7-ns mb0">
+                  A-Frame is a free, <strong>open-source</strong> framework for making <strong>Virtual Reality</strong> on the <strong>Web</strong> using <strong>HTML</strong> and <strong>JavaScript</strong>.
+                </p>
+                <p class="measure f5 f4-ns lh-copy dn mb0">
+                  You can use components to modify, extend, or change your design needs.
+                  You shouldn&rsquo;t need to write JavaScript every time you want to build a new
+                  component. By learning A-Frame components, you can quickly start to build out interfaces using composable building blocks while writing little to no JavaScript.
+                </p>
+              </div>
+              <div class="fl-l w-40-l tl tc-ns pt1 pt2-ns pb3-ns self-center-l near-black">
+                <a
+                  class="f6 f5-ns fw6 dib ba b--black-20 bg-green washed-green hover-white ph3 ph4-ns pv2 pv2-ns br1 grow w7 no-underline"
+                  href="https://raw.githubusercontent.com/tachyons-css/tachyons/master/css/tachyons.min.css">
+                  Download
+                  <span class="db lh-copy o-60">
+                    <!-- <span class="code f6">aframe.min.js</span> -->
+                    <span class="f6 fw4 db">version 0.5.0</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+          <!--
+          <menu>
+            <a class="f6 link">Get Started</a>
+            <a class="f6 link">Features</a>
+            <a class="f6 link">A-Frame in the Wild</a>
+          </menu>
+          -->
+        <!-- </div> -->
+      <!-- </nav> -->
+    <!-- </div> -->
+
+    <header id="about" class="about bg-near-white pa3 pa3-ns" data-section="nav">
+      <div class="mw8 center">
+        <section class="about-copy pt1-l pb1-l pt1-ns pb1-ns">
+          <h1 class="f5 fw5 dib mr3 pr3 b--dotted near-black b--black-10 bt-0 bb-0 bl-0 about-mozillavr"><span class="mozilla o-90">Mozilla </span><span class="vr o-90">VR</span></h1>
+          <p class="f5 slogan dib pl3 mb0"><span class="fw4 black-90">We make tools for creating Virtual Reality in your web browser today.</span> <span class="slogan-secondary pt3 black-90 o-50">You make the realities of tomorrow.</span></p>
+        </section>
+      </div>
+    </header>
+
+    <section id="blog" data-section="blog" class="tl pa3 pa5-ns bg-light-yellow dark-gray">
+      <div class="mw8 center">
+        <h2 class="f2 fw6 bt bw2 red o-90 pt4 pb4 lh-title">Latest news</h2>
+        <ol class="list">
+          <li class="pb4">
+            <a href="" class="db pa3 na3 bg-white-50">
+              <span class="post-title fw6 purple db mb4 pb2">WebVR India Community Debuts &ldquo;WebVR Hack Nights&rdquo;</span>
+            </a>
+            <span class="post-author mid-gray dib relative top--2">by <a href="">Ram Dayal Vaishnav</a></span>
+            <span class="post-time mid-gray dib relative top--2">on <time class="dark-gray dark-green">5 May, 2017</time></span>
+          </li>
+          <li class="pb4">
+            <a href="" class="db pa3 na3 bg-white-50">
+              <span class="post-title fw6 purple db mb4 pb2">WebVR Google Daydream support lands in Servo</span>
+            </a>
+            <span class="post-author mid-gray relative top--2">by <a href="">Imanol Fernandez</a></span>
+            <span class="post-time mid-gray relative top--2">on <time class="dark-gray dark-green">19 April, 2017</time></span>
+          </li>
+          <li class="pb4">
+            <a href="" class="db pa3 na3 bg-white-50">
+              <span class="post-title fw6 purple db mb4 pb2">glTF Workflow for A-Saturday-Night</span>
+            </a>
+            <span class="post-author mid-gray relative top--2">by <a href="">Diego F. Goberna</a></span>
+            <span class="post-time mid-gray relative top--2">on <time class="dark-gray dark-green">10 April, 2017</time></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="oss" data-section="oss" class="tl pa3 pa5-ns bg-light-green black">
+      <div class="mw8 center">
+        <h2 class="f2 fw6 bt b-dark-green-90 bw2 black-90 pt4 pb4 dark-green lh-title">Open-Source Software</h2>
+        <section class="pt2">
+          <ul class="flex-ns flex-wrap-ns flex-row-ns content-stretch space-between items-stretch nt2 nl2">
+            <li data-slug="a-frame" class="w-25-l w-third-ns w-50-m pa2">
+              <a href="https://aframe.io" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
+                <h3 class="f4 fw6">A-Frame</h3>
+                <p class="fw2 o-90 pb2">A web framework for creating VR using HTML &amp; JavaScript.</p>
+                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive, Rift, Daydream, Gear VR, and Cardboard.</p>
+              </a>
+            </li>
+            <li data-slug="firefox" class="w-25-l w-third-ns w-50-m pa2">
+              <a href="https://webvr.rocks/firefox" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
+                <h3 class="f4 fw6">Firefox</h3>
+                <p class="fw2 o-90 pb2">A desktop web browser for experiencing WebVR sites.</p>
+                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive and Rift on Windows for WebVR API <span class="api-version o-60">(v1.1)</span><!-- https://w3c.github.io/webvr/spec/1.1/ -->.</p>
+              </a>
+            </li>
+            <li data-slug="servo" class="w-25-l w-third-ns w-50-m pa2">
+              <a href="https://webvr.rocks/servo" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
+                <h3 class="fw4 fw6">Servo</h3>
+                <p class="fw2 o-90 pb2">A next-generation parallelized, embedded browser engine.</p>
+                <p class="fw2 f6 o-70 mb0 b--black-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive on Windows for WebVR API <span class="api-version o-60">(v1.2)</span>.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section id="community" data-section="community" class="tl pa3 pa5-ns bg-dark-blue light-blue">
+      <div class="mw8 center">
+        <h2 class="f2 fw6 bt b--lightest-blue bw2 lightest-blue o-90 pt4 pb4 lh-title">Community</h2>
+        <section class="pt2">
+          <p>Join the Mozilla VR and WebVR communities!</p>
+        </section>
+      </div>
+    </section>
+
+    <!--
+    <section class="section section--team">
+      <div id="team" class="section__anchor"></div>
+      <div class="wrap section--showcase__wrap">
+        <h1>Team</h1>
+
+        <ul class="flex flex--grid flex--grid--stretch team__list copy--center">
+          <li class="flex--grid--item person" data-person="casey">
+            <h2>Casey Yee</h2>
+
+            <div class="person__title">UX Engineer</div>
+
+            <div class="person__social"><a class="person__social__link" href="http://twitter.com/whoyee"><span class="person__social__name">@whoyee</span></a></div>
+          </li>
+
+          <li class="flex--grid--item person" data-person="cvan">
+            <h2>Chris Van Wiemeersch</h2>
+
+            <div class="person__title">UX Engineer</div>
+
+            <div class="person__social"><a class="person__social__link" href="http://twitter.com/cvanw"><span class="person__social__name">@cvanw</span></a></div>
+          </li>
+
+          <li class="flex--grid--item person" data-person="daosheng">
+            <h2>Daosheng Mu</h2>
+
+            <div class="person__title">Developer</div>
+
+            <div class="person__social"><a class="person__social__link" href="https://twitter.com/daoshengmu"><span class="person__social__name">@daoshengmu</span></a></div>
+          </li>
+
+          <li class="flex--grid--item person" data-person="diego">
+            <h2>Diego Marcos</h2>
+
+            <div class="person__title">Developer</div>
+
+            <div class="person__social"><a class="person__social__link" href="http://twitter.com/dmarcos"><span class="person__social__name">@dmarcos</span></a></div>
+          </li>
+
+          <li class="flex--grid--item person" data-person="fernando">
+            <h2>Fernando Serrano</h2>
+
+            <div class="person__title">Developer</div>
+
+            <div class="person__social"><a class="person__social__link" href="https://twitter.com/fernandojsg"><span class="person__social__name">@fernandojsg</span></a></div>
+          </li>
+
+          <li class="flex--grid--item person" data-person="kevin">
+            <h2>Kevin Ngo</h2>
+
+            <div class="person__title">Developer</div>
+
+            <div class="person__social"><a class="person__social__link" href="http://twitter.com/andgokevin"><span class="person__social__name">@andgokevin</span></a></div>
+          </li>
+
+          <li class="flex--grid--item person" data-person="kip">
+            <h2>Kip Gilbert</h2>
+
+            <div class="person__title">Platform Engineer</div>
+
+            <div class="person__social"><a class="person__social__link" href="https://twitter.com/kearwoodgilbert"><span class="person__social__name">@kearwoodgilbert</span></a></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="section section--footer section--thin copy copy--bright copy--center" id="footer">
+      <div class="wrap wrap--footer">
+        <a href="https://blog.mozvr.com/" class="link--blog">View Blog</a>
+
+        <div class="footer__icons">
+          <p>
+            <a href="https://www.mozilla.org/"><img class="icon icon--mozilla" src="assets/img/logo-mozilla-white.svg" alt="Mozilla" title="Mozilla"></a>
+          </p>
+
+          <p>
+            <a href="https://twitter.com/mozillavr" class="social__link--twitter link--borderless social--item"><img class="icon icon--social" src="assets/img/icon-twitter-white.svg" alt="Twitter" title="Twitter" height="17"></a>
+            <a href="https://github.com/MozVR" class="social__link--github link--borderless social--item"><img class="icon icon--social" src="assets/img/icon-github-white.svg" alt="GitHub" title="GitHub" height="17"></a>
+          </p>
+        </div>
+
+        <p>
+          <a class="link--footer link--legal no-decoration" href="https://www.mozilla.org/en-US/privacy/websites/">Privacy Policy</a> &nbsp;
+          <a class="link--footer link--legal no-decoration" href="https://www.mozilla.org/en-US/about/legal/">Legal Notices</a> &nbsp;
+          <a class="link--footer link--legal no-decoration" href="https://www.mozilla.org/en-US/about/legal/fraud-report/">Report Trademark Abuse</a>
+        </p>
+        <p class="footer__license">
+          Except where otherwise <a class="link--footer link--license no-decoration" href="https://www.mozilla.org/en-US/about/legal/#site">noted</a>, content of this site is licensed under the <a class="link--footer link--license no-decoration" href="https://www.mozilla.org/en-US/foundation/licensing/website-content">Creative Commons</a> <a class="link--footer link--license no-decoration" href="http://creativecommons.org/licenses/by-sa/3.0">Attribution Share-Alike License v3.0</a> or any later.
+        </p>
+      </div>
+    </footer>
+    -->
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/ga.js"></script>
+  </body>
+</html>
