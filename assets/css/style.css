@@ -157,6 +157,30 @@ ul {
   font-size: 0;  /* For `display: inline-block` spacing. */
 }
 
+.aframe-header {
+  background-color: #ef2d5e;
+}
+
+.aframe-wordmark {
+  color: #fff;
+  text-indent: 30px;
+  text-shadow: .5px .5px 0 rgba(0,0,0,.5);
+  padding-left: .5rem;
+  position: relative;
+}
+
+.aframe-wordmark:before {
+  background: url(../img/aframe-sticker-diecut.svg) no-repeat;
+  background-size: 28px auto;
+  content: "";
+  /*padding-right: .25rem;*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 30px;
+  width: 30px;
+}
+
 @media screen and (min-width: 30em) {
   [data-section~="oss"] [data-slug] a h3 + p {
     min-height: 5rem;
