@@ -60,7 +60,7 @@
           </a>
           <a title="Templates" href="/aframe/templates/"
               class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
-            Templates
+            Scene Templates
           </a>
           <a title="Components" href="/aframe/components"
               class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
@@ -105,9 +105,9 @@
         <article>
           <header class="ph3 ph5-ns w-100 bg-transparent pv3 mb5-ns bb b--black-10 overflow-auto nb1-ns bg-washed-red">
             <div class="nowrap mw9 center">
-              <a title="Demos" href="#demos"
+              <a title="Demo" href="#demo"
                   class="pv1-ns f6 fw6 link black-70 hover-near-black pr2 pr3-m pr4-l dib">
-                Demos
+                Demo
               </a>
               <a title="Get Started" href="#getting-started"
                   class="pv1-ns f6 fw6 link black-70 hover-near-black mr1 pr3-m pr4-l dib">
@@ -117,11 +117,15 @@
                   class="pv1-ns f6 fw6 link black-70 hover-near-black mr1 pr3-m pr4-l dib">
                 Features
               </a>
+              <a title="Scene Templates" href="#templates"
+                  class="pv1-ns f6 fw6 link black-70 hover-near-black pr2 pr3-m pr4-l dib">
+                Scene Templates
+              </a>
               <a title="A-Frame in the Wild" href="#in-the-wild"
                   class="pv1-ns f6 fw6 link black-70 hover-near-black mr1 pr3-m pr4-l dib">
                 A-Frame in the Wild
               </a>
-              <a title="FAQ" href="#faq"
+              <a title="FAQ" href="https://aframe.io/faq"
                   class="pv1-ns f6 fw6 link black-70 hover-near-black mr1 pr3-m pr4-l dib">
                 FAQ
               </a>
@@ -176,7 +180,7 @@
           </div>
         </article>
 
-        <article class="bt b--black-10 bg-washed-yellow black-70 ph3 ph5-ns pv4 pv5-ns" id="demos">
+        <article class="bt b--black-10 bg-washed-yellow black-70 ph3 ph5-ns pv4 pv5-ns" id="demo">
           <div class="mw9 center">
             <h1 class="mt0 f5 f4-ns">Let&rsquo;s build our first world together …</h1>
             <article class="dt pt0 pb5 pv5-m pv3-ns demo-scene w-100">
@@ -240,6 +244,163 @@
             <h2 class="mt4 f5">Install from <a class="bb color-inherit" href="https://www.npmjs.com/package/aframe">npm</a></h2>
             <pre class="mt3 ba b--black-10 h6 bg-white-20 overflow-y-auto mw4 mw6-ns mw7-l"><code class="shell" data-code-lang="shell"><span class="near-white">npm install</span> <span class="hot-pink">aframe</span> <span class="white-70">--save</span></code></pre>
             <pre class="mt3 ba b--black-10 h6 bg-white-20 overflow-y-auto mw4 mw6-ns mw7-l"><code class="js" data-code-lang="js">const AFRAME = require('aframe');</code></pre>
+          </div>
+        </article>
+
+        <article class="bt b--black-20 bg-white black-70 ph3 ph5-ns pv4 pv5-ns" id="templates">
+          <div class="mw9 center">
+            <h1 class="mt0 f5 f3-ns">Boilerplate Scene Templates</h1>
+            <p class="f5 measure-wide lh-copy">
+              Check out these scene templates and discover creative ways to customize your own A-Frame creations to your liking.
+            </p>
+            <section class="cf w-100 pa2-ns mt3 nl3-ns templates-list" id="templates-list">
+              <article class="fl w-100 w-50-m w-25-ns mt3 pa2-ns">
+                <a href="https://github.com/aframevr-userland/aframe-default-template">
+                  <div class="aspect-ratio aspect-ratio--1x1">
+                    <img style="background-image: url(aframe/assets/img/templates/default.png)"
+                      class="db bg-center cover aspect-ratio--object">
+                  </div>
+                  <div class="pt2 pt3-l pb3 link db">
+                    <h3 class="f5 f4-ns mb0 black-90">Default</h3>
+                    <h3 class="f6 f5 fw4 mt2 black-60">A basic world</h3>
+                  </div>
+                </a>
+                <div class="dn db-l">
+                  <p><a href="" class="ba black-70 bg-blue washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns mr2 mb1">Live demo</a> <span class="pb2-m db dn-ns"></span> <a href="" class="ba black-70 bg-green washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns">Download</a></p>
+                  <p class="mt2"><a href="" class="ba black-70 bg-purple washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns f6">Documentation</a></p>
+                </div>
+              </article>
+              <article class="fl w-100 w-50-m w-25-ns mt3 pa2-ns">
+                <a href="https://github.com/aframevr-userland/aframe-cli/pull/16">
+                  <div class="aspect-ratio aspect-ratio--1x1">
+                    <img style="background-image: url(aframe/assets/img/templates/primitives.png)"
+                      class="db bg-center cover aspect-ratio--object">
+                  </div>
+                  <div class="pt2 pt3-l pb3 link db">
+                    <h3 class="f5 f4-ns mb0 black-90">Primitives</h3>
+                    <h3 class="f6 f5 fw4 mt2 black-60">Built using only A-Frame&rsquo;s primitive tags</h3>
+                  </div>
+                </a>
+                <div class="dn db-l">
+                  <p><a href="" class="ba black-70 bg-blue washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns mr2 mb1">Live demo</a> <span class="pb2-m db dn-ns"></span> <a href="" class="ba black-70 bg-green washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns">Download</a></p>
+                  <p class="mt2"><a href="" class="ba black-70 bg-purple washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns f6">Documentation</a></p>
+                </div>
+              </article>
+              <article class="fl w-100 w-50-m w-25-ns mt3 pa2-ns">
+                <a href="https://github.com/aframevr-userland/aframe-cli/pull/17">
+                  <div class="aspect-ratio aspect-ratio--1x1">
+                    <img style="background-image: url(aframe/assets/img/templates/model-viewer.png)"
+                      class="db bg-center cover aspect-ratio--object">
+                  </div>
+                  <div class="pt2 pt3-l pb3 link db">
+                    <h3 class="f5 f4-ns mb0 black-90">Model Viewer</h3>
+                    <h3 class="f6 f5 fw4 mt2 black-60">Render glTF models</h3>
+                  </div>
+                </a>
+                <div class="dn db-l">
+                  <p><a href="" class="ba black-70 bg-blue washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns mr2 mb1">Live demo</a> <span class="pb2-m db dn-ns"></span> <a href="" class="ba black-70 bg-green washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns">Download</a></p>
+                  <p class="mt2"><a href="" class="ba black-70 bg-purple washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns f6">Documentation</a></p>
+                </div>
+              </article>
+              <article class="fl w-100 w-50-m w-25-ns mt3 pa2-ns">
+                <a href="https://github.com/tunnelrun/streetview">
+                  <div class="aspect-ratio aspect-ratio--1x1">
+                    <img style="background-image: url(aframe/assets/img/templates/streetview.png)"
+                      class="db bg-center cover aspect-ratio--object">
+                  </div>
+                  <div class="pt2 pt3-l pb3 link db">
+                    <h3 class="f5 f4-ns mb0 black-90">360&deg; Street-View Panorama</h3>
+                    <h3 class="f6 f5 fw4 mt2 black-60">Explore your current location in VR!</h3>
+                  </div>
+                </a>
+                <div class="dn db-l">
+                  <p><a href="" class="ba black-70 bg-blue washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns mr2 mb1">Live demo</a> <span class="pb2-m db dn-ns"></span> <a href="" class="ba black-70 bg-green washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns">Download</a></p>
+                  <p class="mt2"><a href="" class="ba black-70 bg-purple washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns f6">Documentation</a></p>
+                </div>
+              </article>
+              <article class="fl w-100 w-50-m w-25-ns mt3 pa2-ns">
+                <a href="https://github.com/aframevr-userland/aframe-360-image-gallery-template">
+                  <div class="aspect-ratio aspect-ratio--1x1">
+                    <img style="background-image: url(aframe/assets/img/templates/360-image-gallery.png)"
+                      class="db bg-center cover aspect-ratio--object">
+                  </div>
+                  <div class="pt2 pt3-l pb3 link db">
+                    <h3 class="f5 f4-ns mb0 black-90">360&deg; Image Gallery</h3>
+                    <h3 class="f6 f5 fw4 mt2 black-60">Swap between panoramic images</h3>
+                  </div>
+                </a>
+                <div class="dn db-l">
+                  <p><a href="" class="ba black-70 bg-blue washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns mr2 mb1">Live demo</a> <span class="pb2-m db dn-ns"></span> <a href="" class="ba black-70 bg-green washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns">Download</a></p>
+                  <p class="mt2"><a href="" class="ba black-70 bg-purple washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns f6">Documentation</a></p>
+                </div>
+              </article>
+              <article class="fl w-100 w-50-m w-25-ns mt3 pa2-ns">
+                <a href="https://aframe.io/aframe/examples/boilerplate/360-video/">
+                  <div class="aspect-ratio aspect-ratio--1x1">
+                    <img style="background-image: url(aframe/assets/img/templates/360-video.png)"
+                      class="db bg-center cover aspect-ratio--object">
+                  </div>
+                  <div class="pt2 pt3-l pb3 link db">
+                    <h3 class="f5 f4-ns mb0 black-90">360&deg; Video Player</h3>
+                    <h3 class="f6 f5 fw4 mt2 black-60">Play 360&deg; video (Vimeo supported)</h3>
+                  </div>
+                </a>
+                <div class="dn db-l">
+                  <p><a href="" class="ba black-70 bg-blue washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns mr2 mb1">Live demo</a> <span class="pb2-m db dn-ns"></span> <a href="" class="ba black-70 bg-green washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns">Download</a></p>
+                  <p class="mt2"><a href="" class="ba black-70 bg-purple washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns f6">Documentation</a></p>
+                </div>
+              </article>
+              <!--
+              <article class="fl w-100 w-50-m w-25-ns mt3 pa2-ns">
+                <a href="https://aframe.io/aframe/examples/showcase/anime-UI/">
+                  <div class="aspect-ratio aspect-ratio--1x1">
+                    <img style="background-image: url(aframe/assets/img/templates/anime-ui.png)"
+                      class="db bg-center cover aspect-ratio--object">
+                  </div>
+                  <div class="pt2 pt3-l pb3 link db">
+                    <h3 class="f5 f4-ns mb0 black-90">Anime UI</h3>
+                    <h3 class="f6 f5 fw4 mt2 black-60">Futuristic scene built with models</h3>
+                  </div>
+                </a>
+                <div class="dn db-l">
+                  <p><a href="" class="ba black-70 bg-blue washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns mr2 mb1">Live demo</a> <span class="pb2-m db dn-ns"></span> <a href="" class="ba black-70 bg-green washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns">Download</a></p>
+                  <p class="mt2"><a href="" class="ba black-70 bg-purple washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns f6">Documentation</a></p>
+                </div>
+              </article>
+              -->
+              <article class="fl w-100 w-50-m w-25-ns mt3 pa2-ns">
+                <a href="https://aframe.io/examples/showcase/animation/">
+                  <div class="aspect-ratio aspect-ratio--1x1">
+                    <img style="background-image: url(aframe/assets/img/templates/animation.png)"
+                      class="db bg-center cover aspect-ratio--object">
+                  </div>
+                  <div class="pt2 pt3-l pb3 link db">
+                    <h3 class="f5 f4-ns mb0 black-90">Animation</h3>
+                    <h3 class="f6 f5 fw4 mt2 black-60">Awe in A-Frame&rsquo;s animations</h3>
+                  </div>
+                </a>
+                <div class="dn db-l">
+                  <p><a href="" class="ba black-70 bg-blue washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns mr2 mb1">Live demo</a> <span class="pb2-m db dn-ns"></span> <a href="" class="ba black-70 bg-green washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns">Download</a></p>
+                  <p class="mt2"><a href="" class="ba black-70 bg-purple washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns f6">Documentation</a></p>
+                </div>
+              </article>
+              <article class="fl w-100 w-50-m w-25-ns mt3 pa2-ns">
+                <a href="https://aframe.io/examples/showcase/shopping/">
+                  <div class="aspect-ratio aspect-ratio--1x1">
+                    <img style="background-image: url(aframe/assets/img/templates/shopping.png)"
+                      class="db bg-center cover aspect-ratio--object">
+                  </div>
+                  <div class="pt2 pt3-l pb3 link db">
+                    <h3 class="f5 f4-ns mb0 black-90">Shopping</h3>
+                    <h3 class="f6 f5 fw4 mt2 black-60">Let&rsquo;s go shoe-shopping!</h3>
+                  </div>
+                </a>
+                <div class="dn db-l">
+                  <p><a href="" class="ba black-70 bg-blue washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns mr2 mb1">Live demo</a> <span class="pb2-m db dn-ns"></span> <a href="" class="ba black-70 bg-green washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns">Download</a></p>
+                  <p class="mt2"><a href="" class="ba black-70 bg-purple washed-blue b--black-40 no-underline hover-white grow br1 b dib pv1 ph2 w-100 w4-ns f6">Documentation</a></p>
+                </div>
+              </article>
+            </section>
           </div>
         </article>
 
