@@ -125,13 +125,13 @@
         <article>
           <header class="ph3 ph5-ns w-100 bg-transparent pv3 mb5-ns bb b--black-10 overflow-auto nb1-ns bg-washed-red">
             <div class="nowrap mw9 center">
-              <a title="Getting Started" href="#getting-started"
+              <a title="Demos" href="#demos"
                   class="pv1-ns f6 fw6 link black-70 hover-near-black pr2 pr3-m pr4-l dib">
-                Demo
+                Demos
               </a>
-              <a title="Principles" href="#principles"
+              <a title="Get Started" href="#getting-started"
                   class="pv1-ns f6 fw6 link black-70 hover-near-black mr1 pr3-m pr4-l dib">
-                Get Started
+                Getting Started
               </a>
               <a title="Features" href="#features"
                   class="pv1-ns f6 fw6 link black-70 hover-near-black mr1 pr3-m pr4-l dib">
@@ -162,7 +162,7 @@
               <!--
               <div class="fl w-100 overflow-auto v-top">
                 <iframe src="https://ghbtns.com/github-btn.html?user=aframevr&repo=aframe&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="32px"></iframe>
-                <a href="https://twitter.com/intent/tweet?text=A-Frame: Make WebVR using HTML and JavaScript. Brought to you by Mozilla VR @mozillavr.url=https://aframe.io/" class="twitter bg-white-50 link dib ba br2 ph2 pt1 pb1 lh-solid v-top" style="background-color: #55acee">
+                <a href="https://twitter.com/intent/tweet?text=A-Frame: Make WebVR using HTML and JavaScript. Brought to you by Mozilla VR @mozillavr.url=https://aframe.io/" class="twitter bg-white-50 link dib ba br1 ph2 pt1 pb1 lh-solid v-top" style="background-color: #55acee">
                   <svg class="geomicon dib v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="#fff">
                     <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"/>
                   </svg>
@@ -195,15 +195,16 @@
             </div>
           </div>
         </article>
-        <article class="bt b--black-10 bg-washed-blue black-70 ph3 ph5-ns pv4 pv5-ns" id="getting-started">
+
+        <article class="bt b--black-10 bg-washed-yellow black-70 ph3 ph5-ns pv4 pv5-ns" id="demos">
           <div class="mw9 center">
-            <h1 class="mt0 f5 f4-ns">You can build …</h1>
-            <article class="dt mw6 pt0 pb5 pv5-m pv6-ns demo-scene bg-yellow">
-              <div class="db dtc-ns v-mid-ns">
-                <iframe class="ba b--black-10 w-100 mw7 w5-ns" src="aframe/demos/default/index.html" scrolling="0" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" allowvr="true" allow="vr"></iframe>
+            <h1 class="mt0 f5 f4-ns">Let&rsquo;s build our first world together …</h1>
+            <article class="dt pt0 pb5 pv5-m pv3-ns demo-scene w-100">
+              <div class="db dtc-ns w-100 h-100 mw7">
+                <iframe class="db dtc-ns h-100 ba b--black-10 w-100 mw7 w6-ns" src="aframe/demos/default/index.html" scrolling="0" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" allowvr="true" allow="vr"></iframe>
               </div>
-              <section class="db dtc-ns v-mid ph2 pr0-ns pl3-ns demo-snippet bg-red">
-                <pre class="ml3-ns ba b--black-10 h6 bg-white-20 overflow-y-auto"><code class="html" data-code-lang="html">&lt;!doctype html&gt;
+              <section class="db dtc-ns v-mid ph2 pr0-ns demo-snippet">
+                <pre class="ml3-ns ba b--black-10 h6 bg-white-20 overflow-y-auto mw4 mw6-ns mw7-l"><code class="html" data-code-lang="html">&lt;!doctype html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -213,18 +214,33 @@
   &lt;/head&gt;
   &lt;body&gt;
     &lt;a-scene&gt;
-      &lt;a-box position=&quot;-1 0.75 -3&quot; rotation=&quot;0 45 0&quot; color=&quot;#4CC3D9&quot;&gt;&lt;/a-box&gt;
-      &lt;a-sphere position=&quot;0 1.5 -5&quot; radius=&quot;1.25&quot; color=&quot;#EF2D5E&quot;&gt;&lt;/a-sphere&gt;
-      &lt;a-cylinder position=&quot;1 1 -3&quot; radius=&quot;0.5&quot; height=&quot;1.5&quot; color=&quot;#FFC65D&quot;&gt;&lt;/a-cylinder&gt;
-      &lt;a-plane position=&quot;0 0.25 -4&quot; rotation=&quot;-90 0 0&quot; width=&quot;4&quot; height=&quot;4&quot; color=&quot;#7BC8A4&quot;&gt;&lt;/a-plane&gt;
-      &lt;a-entity geometry=&quot;primitive: circle; radius: 40&quot; rotation=&quot;-90 0 0&quot; material=&quot;src: grid.png; repeat: 160 160&quot;&gt;&lt;/a-entity&gt;
+      &lt;a-box position=&quot;-1 0.75 -3&quot; rotation=&quot;0 45 0&quot;
+             color=&quot;#4CC3D9&quot;&gt;&lt;/a-box&gt;
+
+      &lt;a-sphere position=&quot;0 1.5 -5&quot; radius=&quot;1.25&quot;
+                color=&quot;#EF2D5E&quot;&gt;&lt;/a-sphere&gt;
+
+      &lt;a-cylinder position=&quot;1 1 -3&quot; radius=&quot;0.5&quot; height=&quot;1.5&quot;
+                  color=&quot;#FFC65D&quot;&gt;&lt;/a-cylinder&gt;
+
+      &lt;a-plane position=&quot;0 0.25 -4&quot; rotation=&quot;-90 0 0&quot; width=&quot;4&quot;
+               height=&quot;4&quot; color=&quot;#7BC8A4&quot;&gt;&lt;/a-plane&gt;
+
+      &lt;a-entity geometry=&quot;primitive: circle; radius: 40&quot;
+                rotation=&quot;-90 0 0&quot;
+                material=&quot;src: grid.png; repeat: 160 160&quot;&gt;&lt;/a-entity&gt;
+
       &lt;a-sky src=&quot;sky.png&quot;&gt;&lt;/a-sky&gt;
     &lt;/a-scene&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
               </section>
             </article>
+          </div>
+        </article>
 
+        <article class="bt b--black-10 bg-washed-green black-70 ph3 ph5-ns pv4 pv5-ns" id="getting-started">
+          <div class="mw9 center">
             <h1 class="mt0 f5 f3-ns">Getting Started</h1>
             <p class="f5 measure lh-copy">
               Copy the lines of code below and paste them in the head of the HTML of your web page.
@@ -233,6 +249,46 @@
         </article>
       </section>
     </main>
+
+    <footer class="bg-white black-70 ph3 ph5-ns pv3 pv5-ns bt b--black-10">
+      <div class="mw9 center">
+        <div class="pt2">
+          <a class="ba black-70 bg-gold no-underline grow br1 b inline-flex items-center mr4 mb3 mb4-ns pv2 ph3 w-100 w-auto-ns" href="https://stackoverflow.com/questions/tagged/aframe" title="Question? Ask on Stack Overflow">
+            <div class="w2 pv1 pr2">
+              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12.658 14.577v-4.27h1.423V16H1.23v-5.693H2.65v4.27h10.006zm-8.583-1.423h7.16V11.73h-7.16v1.424zm.173-3.235l6.987 1.465.3-1.38L4.55 8.54l-.302 1.38zm.906-3.365l6.47 3.02.602-1.295-6.47-3.02-.602 1.295zm1.81-3.19l5.478 4.57.906-1.078-5.477-4.57-.905 1.077zM10.502 0L9.338.863l4.27 5.735 1.164-.862L10.5 0z"/></svg>
+            </div>
+            <span>Question? Ask on Stack Overflow</span>
+          </a>
+          <a class="ba br1 black-70 bg-moon-gray no-underline grow b inline-flex items-center mr4 mb3 mb4-ns pv2 ph3 w-100 w-auto-ns" href="https://github.com/aframevr/aframe/issues" title="File a bug, request a feature, or ask a question!">
+            <div class="w2 pv1 pr2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"/></svg>
+            </div>
+            <span>Report an issue on GitHub</span>
+          </a>
+          <a class="ba dark-green bg-light-green no-underline grow br1 b inline-flex items-center mr4 mb3 mb4-ns pv2 ph3 w-100 w-auto-ns" href="https://slacknow.herokuapp.com/aframevr/" title="Chat on the A-Frame Community Slack">
+            <div class="dib w2 pv1 pr2">
+              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><g fill-rule="nonzero"><path d="M6.586 7.33l.69 2.057 2.137-.716-.69-2.056-2.137.716z"/><path d="M12.55 9.37l-1.037.347.36 1.073c.145.434-.09.904-.524 1.05-.096.03-.19.045-.287.042-.338-.01-.65-.226-.765-.566l-.36-1.072-2.138.716.36 1.072c.145.435-.09.905-.523 1.05-.096.032-.192.045-.286.043-.34-.01-.65-.226-.764-.566l-.36-1.075-1.037.348c-.096.03-.19.045-.286.042-.34-.008-.65-.226-.765-.565-.146-.434.09-.904.522-1.05L5.7 9.914l-.69-2.058-1.037.347c-.094.032-.19.045-.285.043-.338-.01-.65-.226-.765-.566-.145-.434.09-.904.523-1.05l1.037-.347-.36-1.073c-.145-.434.09-.904.524-1.05.435-.145.905.09 1.05.524l.36 1.072 2.137-.716-.36-1.072c-.144-.435.09-.905.524-1.05.435-.145.906.09 1.05.523l.36 1.075 1.037-.347c.434-.146.904.088 1.05.522.145.434-.09.904-.523 1.05l-1.037.347.69 2.057 1.036-.347c.435-.145.905.09 1.05.523.146.434-.09.904-.522 1.05zm2.78-3.57C13.68.304 11.298-.98 5.8.67.304 2.32-.98 4.7.67 10.2c1.65 5.497 4.03 6.78 9.53 5.13 5.497-1.65 6.78-4.03 5.13-9.53z"/></g></svg>
+            </div>
+            <span>Chat on the A-Frame Community Slack</span>
+          </a>
+          <a class="ba black-70 bg-blue washed-blue b--navy no-underline grow br1 b inline-flex items-center mb3 mb4-ns pv2 ph3 w-100 w-auto-ns" href="https://twitter.com/aframevr" title="Follow us on Twitter: @aframevr">
+            <div class="w2 pv1 pr2">
+              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg>
+            </div>
+            <span>Follow @aframevr on Twitter</span>
+          </a>
+        </div>
+        <p class="f6 measure-wide copy lh-copy pt3-ns">
+          <strong class="fw6">Have a question?</strong> Need help? Feel free to <a href="https://stackoverflow.com/questions/tagged/aframe">ask a question on Stack Overflow</a> or <a href="https://github.com/aframevr/aframe/issues">open an issue on GitHub</a>.
+        </p>
+        <p class="f6 measure-wide copy lh-copy pt3-ns">
+          <strong class="fw6">Want to chat with the community?</strong> <a href="https://slacknow.herokuapp.com/aframevr/">Join our Slack chat!</a>
+        </p>
+        <p class="f6 measure-wide copy lh-copy pt3-ns">
+          The A-Frame community is an ecosystem and a growing community of people who come together to make developing WebVR a rewarding experience. Check out our <a href="https://aframe.io/community/"><strong class="fw6">Community page</strong></a> for more information.
+        </p>
+      </div>
+    </footer>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/ga.js"></script>
