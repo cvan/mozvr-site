@@ -141,6 +141,15 @@ ul {
   text-indent: -9999px;
 }
 
+.mozilla-wordmark-badge img {
+  width: 6rem;
+}
+
+.mozilla-wordmark-badge:hover {
+  opacity: 1;
+  transition: .15s opacity ease-in-out;
+}
+
 .about-mozillavr {
   border-right-width: 1px;
 }
@@ -187,19 +196,52 @@ ul {
   max-width: 22rem;
 }
 
-@media screen and (min-width: 30em) and (max-width: 60em) {
-  .aframe-wordmark:before {
-    background-size: 32px auto;
-    top: 2px;
-    width: 34px;
-  }
-}
-
 @media screen and (min-width: 60em) {
   .aframe-wordmark:before {
     background-size: 36px auto;
     top: 1px;
     width: 38px;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  .mozilla-wordmark-badge img {
+    width: 3rem;
+    right: auto;
+  }
+
+  .aframe-header {
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 38em) {
+  .mozilla-wordmark-badge img {
+    width: 3.5rem;
+  }
+
+  .aframe-header {
+    padding-top: .5rem;
+  }
+}
+
+@media screen and (min-width: 57em) {
+  .mozilla-wordmark-badge img {
+    opacity: .8;
+    width: 4rem;
+  }
+
+  .aframe-header {
+    padding-bottom: 1.1rem;
+    padding-top: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .aframe-wordmark:before {
+    background-size: 32px auto;
+    top: 2px;
+    width: 34px;
   }
 }
 
