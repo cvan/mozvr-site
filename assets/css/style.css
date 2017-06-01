@@ -82,6 +82,7 @@ ul {
 [data-section~="oss"] [data-slug] a {
   background-color: #fff;
   background-size: 2.5rem auto;
+  background-size: calc(1.6rem + .5vw + .25vh) auto;
   background-position: 100% 0;
   background-position: calc(100% - 1rem) calc(0% + 1rem);
   background-repeat: no-repeat;
@@ -179,6 +180,10 @@ ul {
   top: 0;
   height: 30px;
   width: 30px;
+}
+
+.oss-project-description {
+  max-width: 22rem;
 }
 
 @media screen and (min-width: 30em) {
