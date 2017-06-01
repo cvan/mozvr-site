@@ -219,12 +219,45 @@
           </div>
         </article>
 
-        <article class="bt b--black-10 bg-washed-green black-70 ph3 ph5-ns pv4 pv5-ns" id="getting-started">
+        <article class="bt b--black-10 bg-gold black-70 ph3 ph5-ns pv4 pv5-ns" id="getting-started">
           <div class="mw9 center">
             <h1 class="mt0 f5 f3-ns">Getting started</h1>
-            <p class="f5 measure lh-copy">
+            <p class="f5 measure lh-copy mb3">
               Copy the lines of code below and paste them in the <code>&lt;head&gt;</code> of the HTML of your web page.
             </p>
+            <pre class="mt3 ba b--black-10 h6 bg-white-20 overflow-y-auto mw4 mw6-ns mw7-l"><code class="html" data-code-lang="html">&lt;script src=&quot;https://aframe.io/releases/0.5.0/aframe.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+            <h2 class="mt4 f5">Download the A-Frame boilerplate</h2>
+            <p class="mt3"><a class="ba black-70 bg-green washed-blue b--navy no-underline grow br1 b dib pv2 ph3 w-100 w-auto-ns" href="https://aframe.io/docs/0.5.0/introduction/installation.html#download-the-boilerplate-on-github">Download Starter Kit</a></p>
+
+            <h2 class="mt4 f5">Learn A-Frame step by step</h2>
+            <p class="mt3"><a class="ba black-70 bg-blue washed-blue b--navy no-underline grow br1 b dib pv2 ph3 w-100 w-auto-ns" href="https://aframe.io/aframe-school/">A-Frame School</a></p>
+
+            <h2 class="mt4 f5">Install using the <a class="bb color-inherit" href="https://www.npmjs.com/package/aframe-cli">A-Frame CLI tool</a></h2>
+            <pre class="mt3 ba b--black-10 h6 bg-white-20 overflow-y-auto mw4 mw6-ns mw7-l"><code class="shell" data-code-lang="shell"><span class="near-white">npm install</span> <span class="white-70">-g</span> <span class="hot-pink">aframe-cli</span>
+<span class="shell-line near-white"><span class="hot-pink">aframe-cli</span> new <span class="white-70 dn">my-aframe-project</span></span></code></pre>
+
+            <h2 class="mt4 f5">Install from <a class="bb color-inherit" href="https://www.npmjs.com/package/aframe">npm</a></h2>
+            <pre class="mt3 ba b--black-10 h6 bg-white-20 overflow-y-auto mw4 mw6-ns mw7-l"><code class="shell" data-code-lang="shell"><span class="near-white">npm install</span> <span class="hot-pink">aframe</span> <span class="white-70">--save</span></code></pre>
+            <pre class="mt3 ba b--black-10 h6 bg-white-20 overflow-y-auto mw4 mw6-ns mw7-l"><code class="js" data-code-lang="js">const AFRAME = require('aframe');</code></pre>
+          </div>
+        </article>
+
+        <article class="bt b--black-20 bg-washed-green black-70 ph3 ph5-ns pv4 pv5-ns" id="getting-started">
+          <div class="mw9 center">
+            <h1 class="mt0 f5 f3-ns">A-Frame in the wild</h1>
+            <p class="f5 measure-wide lh-copy">
+              A-Frame is being used in <a href="https://github.com/aframevr/awesome-aframe" class="underline-hover hover-dark-blue">awesome</a> and interesting ways by the <a href="https://aframe.io/community/" class="underline-hover hover-dark-blue">community</a>. To name a few fine folks:
+            </p>
+            <ul class="mt3 lh-copy flex-ns flex-wrap-ns f4 f4-ns f3-l">
+              <li class="pb1 pt2-l fw4 inline-flex-ns w-50-ns w-25-l pr5-ns mb2-ns"><a class="db underline-hover hover-dark-blue" href="https://www.amnesty.org.uk/" title="Amnesty International UK">Amnesty International UK</a></li>
+              <li class="pb1 pt2-l fw4 inline-flex-ns w-50-ns w-25-l pr5-ns mb2-ns"><a class="db underline-hover hover-dark-blue" href="https://www.washingtonpost.com/graphics/business/mars-journey/" title="The Washington Post">The Washington Post</a></li>
+              <li class="pb1 pt2-l fw4 inline-flex-ns w-50-ns w-25-l pr5-ns mb2-ns"><a class="db underline-hover hover-dark-blue" href="http://vrviewer.istaging.com/#!/684173" title="iStaging LiveTour">iStaging LiveTour</a></li>
+              <li class="pb1 pt2-l fw4 inline-flex-ns w-50-ns w-25-l pr5-ns mb2-ns"><a class="db underline-hover hover-dark-blue" href="https://aframe.io/a-painter/" title="Mozilla">Mozilla A-Painter</a></li>
+              <li class="pb1 pt2-l fw4 inline-flex-ns w-50-ns w-25-l pr5-ns mb2-ns"><a class="db underline-hover hover-dark-blue" href="https://shopifyvr.myshopify.com/" title="Shopify VR">Shopify VR</a></li>
+              <li class="pb1 pt2-l fw4 inline-flex-ns w-50-ns w-25-l pr5-ns mb2-ns"><a class="db underline-hover hover-dark-blue" href="http://blog.apps.npr.org/2016/07/22/how-we-built-our-first-vr-story.html" title="NPR">NPR</a></li>
+              <li class="pb1 pt2-l fw4 inline-flex-ns w-50-ns w-25-l pr5-ns mb2-ns"><a class="db underline-hover hover-dark-blue" href="https://gurivr.com/">Open News</a></li>
+            </ul>
           </div>
         </article>
       </section>
@@ -259,7 +292,7 @@
           </a>
         </div>
         <p class="f6 measure-wide copy lh-copy pt3-ns">
-          <strong class="fw6">Have a question?</strong> Need help? Feel free to <a href="https://stackoverflow.com/questions/tagged/aframe">ask a question on Stack Overflow</a> or <a href="https://github.com/aframevr/aframe/issues">open an issue on GitHub</a>.
+          <strong class="fw6">Have a question?</strong> Check our <a href="https://aframe.io/faq">FAQ</a>. Need help? Feel free to <a href="https://stackoverflow.com/questions/tagged/aframe">ask a question on Stack Overflow</a> or <a href="https://github.com/aframevr/aframe/issues">open an issue on GitHub</a>.
         </p>
         <p class="f6 measure-wide copy lh-copy pt3-ns">
           <strong class="fw6">Want to chat with the community?</strong> <a href="https://slacknow.herokuapp.com/aframevr/">Join our Slack chat!</a>
