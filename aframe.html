@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="assets/css/tachyons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="aframe/assets/js/highlight/styles/qtcreator_dark.css" async>
 
     <link rel="icon" href="assets/img/aframe-sticker-diecut.svg">
 
@@ -72,7 +73,7 @@
             -->
           </a>
         </div>
-        <nav class="db dtc-ns v-mid w-100 tr-ns mt0-ns pa3 pa0-l">
+        <nav class="db dtc-ns v-mid w-100 tr-ns mt0-ns pa3 pt1 pa3-ns pt2-ns pa0-l">
           <a title="Docs" href="/aframe/docs/"
               class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
             Docs
@@ -101,16 +102,16 @@
               class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
             Get Involved
           </a>
-          <a title="Tachyons on GitHub" href="https://github.com/aframevr/aframe"
+          <a title="A-Frame on GitHub" href="https://github.com/aframevr/aframe"
               class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib dib-l white-80 hover-white pv3-l">
             GitHub
           </a>
           <!--
-          <a title="Tachyons on GitHub" href="http://github.com/tachyons-css/tachyons/"
+          <a title="Chat on the A-Frame Slack" href="https://slacknow.herokuapp.com/aframevr/"
               class="f6 fw6 hover-blue link black-70 pr2 pr3-m pr4-l dn dib-l">
             Slack
           </a>
-          <a title="Tachyons on GitHub" href="http://github.com/tachyons-css/tachyons/"
+          <a title="Follow @aframevr on Twitter" href="http://twitter.com/aframevr"
               class="f6 fw6 hover-blue link black-70 pr2 pr3-m pr4-l dn dib-l">
             Twitter
           </a>
@@ -194,192 +195,48 @@
             </div>
           </div>
         </article>
+        <article class="bt b--black-10 bg-washed-blue black-70 ph3 ph5-ns pv4 pv5-ns" id="getting-started">
+          <div class="mw9 center">
+            <h1 class="mt0 f5 f4-ns">You can build …</h1>
+            <article class="dt mw6 pt0 pb5 pv5-m pv6-ns demo-scene bg-yellow">
+              <div class="db dtc-ns v-mid-ns">
+                <iframe class="ba b--black-10 w-100 mw7 w5-ns" src="aframe/demos/default/index.html" scrolling="0" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" allowvr="true" allow="vr"></iframe>
+              </div>
+              <section class="db dtc-ns v-mid ph2 pr0-ns pl3-ns demo-snippet bg-red">
+                <pre class="ml3-ns ba b--black-10 h6 bg-white-20 overflow-y-auto"><code class="html" data-code-lang="html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;My First WebVR Scene • Made with A-Frame&lt;/title&gt;
+    &lt;script src=&quot;https://aframe.io/releases/0.5.0/aframe.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;a-scene&gt;
+      &lt;a-box position=&quot;-1 0.75 -3&quot; rotation=&quot;0 45 0&quot; color=&quot;#4CC3D9&quot;&gt;&lt;/a-box&gt;
+      &lt;a-sphere position=&quot;0 1.5 -5&quot; radius=&quot;1.25&quot; color=&quot;#EF2D5E&quot;&gt;&lt;/a-sphere&gt;
+      &lt;a-cylinder position=&quot;1 1 -3&quot; radius=&quot;0.5&quot; height=&quot;1.5&quot; color=&quot;#FFC65D&quot;&gt;&lt;/a-cylinder&gt;
+      &lt;a-plane position=&quot;0 0.25 -4&quot; rotation=&quot;-90 0 0&quot; width=&quot;4&quot; height=&quot;4&quot; color=&quot;#7BC8A4&quot;&gt;&lt;/a-plane&gt;
+      &lt;a-entity geometry=&quot;primitive: circle; radius: 40&quot; rotation=&quot;-90 0 0&quot; material=&quot;src: grid.png; repeat: 160 160&quot;&gt;&lt;/a-entity&gt;
+      &lt;a-sky src=&quot;sky.png&quot;&gt;&lt;/a-sky&gt;
+    &lt;/a-scene&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              </section>
+            </article>
+
+            <h1 class="mt0 f5 f3-ns">Getting Started</h1>
+            <p class="f5 measure lh-copy">
+              Copy the lines of code below and paste them in the head of the HTML of your web page.
+            </p>
+          </div>
+        </article>
       </section>
     </main>
 
-          <!--
-          <menu>
-            <a class="f6 link">Get Started</a>
-            <a class="f6 link">Features</a>
-            <a class="f6 link">A-Frame in the Wild</a>
-          </menu>
-          -->
-        <!-- </div> -->
-      <!-- </nav> -->
-    <!-- </div> -->
-
-    <header id="about" class="about bg-near-white pa3 pa3-ns" data-section="nav">
-      <div class="mw8 center">
-        <section class="about-copy pt1-l pb1-l pt1-ns pb1-ns">
-          <h1 class="f5 fw5 dib mr3 pr3 b--dotted near-black b--black-10 bt-0 bb-0 bl-0 about-mozillavr"><span class="mozilla o-90">Mozilla </span><span class="vr o-90">VR</span></h1>
-          <p class="f5 slogan dib pl3 mb0"><span class="fw4 black-90">We make tools for creating Virtual Reality in your web browser today.</span> <span class="slogan-secondary pt3 black-90 o-50">You make the realities of tomorrow.</span></p>
-        </section>
-      </div>
-    </header>
-
-    <section id="blog" data-section="blog" class="tl pa3 pa5-ns bg-light-yellow dark-gray">
-      <div class="mw8 center">
-        <h2 class="f2 fw6 bt bw2 red o-90 pt4 pb4 lh-title">Latest news</h2>
-        <ol class="list">
-          <li class="pb4">
-            <a href="" class="db pa3 na3 bg-white-50">
-              <span class="post-title fw6 purple db mb4 pb2">WebVR India Community Debuts &ldquo;WebVR Hack Nights&rdquo;</span>
-            </a>
-            <span class="post-author mid-gray dib relative top--2">by <a href="">Ram Dayal Vaishnav</a></span>
-            <span class="post-time mid-gray dib relative top--2">on <time class="dark-gray dark-green">5 May, 2017</time></span>
-          </li>
-          <li class="pb4">
-            <a href="" class="db pa3 na3 bg-white-50">
-              <span class="post-title fw6 purple db mb4 pb2">WebVR Google Daydream support lands in Servo</span>
-            </a>
-            <span class="post-author mid-gray relative top--2">by <a href="">Imanol Fernandez</a></span>
-            <span class="post-time mid-gray relative top--2">on <time class="dark-gray dark-green">19 April, 2017</time></span>
-          </li>
-          <li class="pb4">
-            <a href="" class="db pa3 na3 bg-white-50">
-              <span class="post-title fw6 purple db mb4 pb2">glTF Workflow for A-Saturday-Night</span>
-            </a>
-            <span class="post-author mid-gray relative top--2">by <a href="">Diego F. Goberna</a></span>
-            <span class="post-time mid-gray relative top--2">on <time class="dark-gray dark-green">10 April, 2017</time></span>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="oss" data-section="oss" class="tl pa3 pa5-ns bg-light-green black">
-      <div class="mw8 center">
-        <h2 class="f2 fw6 bt b-dark-green-90 bw2 black-90 pt4 pb4 dark-green lh-title">Open-Source Software</h2>
-        <section class="pt2">
-          <ul class="flex-ns flex-wrap-ns flex-row-ns content-stretch space-between items-stretch nt2 nl2">
-            <li data-slug="a-frame" class="w-25-l w-third-ns w-50-m pa2">
-              <a href="https://aframe.io" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
-                <h3 class="f4 fw6">A-Frame</h3>
-                <p class="fw2 o-90 pb2">A web framework for creating VR using HTML &amp; JavaScript.</p>
-                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive, Rift, Daydream, Gear VR, and Cardboard.</p>
-              </a>
-            </li>
-            <li data-slug="firefox" class="w-25-l w-third-ns w-50-m pa2">
-              <a href="https://webvr.rocks/firefox" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
-                <h3 class="f4 fw6">Firefox</h3>
-                <p class="fw2 o-90 pb2">A desktop web browser for experiencing WebVR sites.</p>
-                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive and Rift on Windows for WebVR API <span class="api-version o-60">(v1.1)</span><!-- https://w3c.github.io/webvr/spec/1.1/ -->.</p>
-              </a>
-            </li>
-            <li data-slug="servo" class="w-25-l w-third-ns w-50-m pa2">
-              <a href="https://webvr.rocks/servo" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
-                <h3 class="fw4 fw6">Servo</h3>
-                <p class="fw2 o-90 pb2">A next-generation parallelized, embedded browser engine.</p>
-                <p class="fw2 f6 o-70 mb0 b--black-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive on Windows for WebVR API <span class="api-version o-60">(v1.2)</span>.</p>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </section>
-
-    <section id="community" data-section="community" class="tl pa3 pa5-ns bg-dark-blue light-blue">
-      <div class="mw8 center">
-        <h2 class="f2 fw6 bt b--lightest-blue bw2 lightest-blue o-90 pt4 pb4 lh-title">Community</h2>
-        <section class="pt2">
-          <p>Join the Mozilla VR and WebVR communities!</p>
-        </section>
-      </div>
-    </section>
-
-    <!--
-    <section class="section section--team">
-      <div id="team" class="section__anchor"></div>
-      <div class="wrap section--showcase__wrap">
-        <h1>Team</h1>
-
-        <ul class="flex flex--grid flex--grid--stretch team__list copy--center">
-          <li class="flex--grid--item person" data-person="casey">
-            <h2>Casey Yee</h2>
-
-            <div class="person__title">UX Engineer</div>
-
-            <div class="person__social"><a class="person__social__link" href="http://twitter.com/whoyee"><span class="person__social__name">@whoyee</span></a></div>
-          </li>
-
-          <li class="flex--grid--item person" data-person="cvan">
-            <h2>Chris Van Wiemeersch</h2>
-
-            <div class="person__title">UX Engineer</div>
-
-            <div class="person__social"><a class="person__social__link" href="http://twitter.com/cvanw"><span class="person__social__name">@cvanw</span></a></div>
-          </li>
-
-          <li class="flex--grid--item person" data-person="daosheng">
-            <h2>Daosheng Mu</h2>
-
-            <div class="person__title">Developer</div>
-
-            <div class="person__social"><a class="person__social__link" href="https://twitter.com/daoshengmu"><span class="person__social__name">@daoshengmu</span></a></div>
-          </li>
-
-          <li class="flex--grid--item person" data-person="diego">
-            <h2>Diego Marcos</h2>
-
-            <div class="person__title">Developer</div>
-
-            <div class="person__social"><a class="person__social__link" href="http://twitter.com/dmarcos"><span class="person__social__name">@dmarcos</span></a></div>
-          </li>
-
-          <li class="flex--grid--item person" data-person="fernando">
-            <h2>Fernando Serrano</h2>
-
-            <div class="person__title">Developer</div>
-
-            <div class="person__social"><a class="person__social__link" href="https://twitter.com/fernandojsg"><span class="person__social__name">@fernandojsg</span></a></div>
-          </li>
-
-          <li class="flex--grid--item person" data-person="kevin">
-            <h2>Kevin Ngo</h2>
-
-            <div class="person__title">Developer</div>
-
-            <div class="person__social"><a class="person__social__link" href="http://twitter.com/andgokevin"><span class="person__social__name">@andgokevin</span></a></div>
-          </li>
-
-          <li class="flex--grid--item person" data-person="kip">
-            <h2>Kip Gilbert</h2>
-
-            <div class="person__title">Platform Engineer</div>
-
-            <div class="person__social"><a class="person__social__link" href="https://twitter.com/kearwoodgilbert"><span class="person__social__name">@kearwoodgilbert</span></a></div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <footer class="section section--footer section--thin copy copy--bright copy--center" id="footer">
-      <div class="wrap wrap--footer">
-        <a href="https://blog.mozvr.com/" class="link--blog">View Blog</a>
-
-        <div class="footer__icons">
-          <p>
-            <a href="https://www.mozilla.org/"><img class="icon icon--mozilla" src="assets/img/logo-mozilla-white.svg" alt="Mozilla" title="Mozilla"></a>
-          </p>
-
-          <p>
-            <a href="https://twitter.com/mozillavr" class="social__link--twitter link--borderless social--item"><img class="icon icon--social" src="assets/img/icon-twitter-white.svg" alt="Twitter" title="Twitter" height="17"></a>
-            <a href="https://github.com/MozVR" class="social__link--github link--borderless social--item"><img class="icon icon--social" src="assets/img/icon-github-white.svg" alt="GitHub" title="GitHub" height="17"></a>
-          </p>
-        </div>
-
-        <p>
-          <a class="link--footer link--legal no-decoration" href="https://www.mozilla.org/en-US/privacy/websites/">Privacy Policy</a> &nbsp;
-          <a class="link--footer link--legal no-decoration" href="https://www.mozilla.org/en-US/about/legal/">Legal Notices</a> &nbsp;
-          <a class="link--footer link--legal no-decoration" href="https://www.mozilla.org/en-US/about/legal/fraud-report/">Report Trademark Abuse</a>
-        </p>
-        <p class="footer__license">
-          Except where otherwise <a class="link--footer link--license no-decoration" href="https://www.mozilla.org/en-US/about/legal/#site">noted</a>, content of this site is licensed under the <a class="link--footer link--license no-decoration" href="https://www.mozilla.org/en-US/foundation/licensing/website-content">Creative Commons</a> <a class="link--footer link--license no-decoration" href="http://creativecommons.org/licenses/by-sa/3.0">Attribution Share-Alike License v3.0</a> or any later.
-        </p>
-      </div>
-    </footer>
-    -->
-
     <script src="assets/js/main.js"></script>
     <script src="assets/js/ga.js"></script>
+    <script src="aframe/assets/js/highlight/highlight.pack.js"></script>
+    <script src="aframe/assets/js/main.js"></script>
   </body>
 </html>

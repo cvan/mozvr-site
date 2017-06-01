@@ -164,9 +164,9 @@ ul {
 
 .aframe-wordmark {
   color: #fff;
-  text-indent: 30px;
+  /*text-indent: 30px;*/
   text-shadow: .5px .5px 0 rgba(0,0,0,.5);
-  padding-left: .5rem;
+  /*padding-left: .5rem;*/
   position: relative;
 }
 
@@ -174,16 +174,33 @@ ul {
   background: url(../img/aframe-sticker-diecut.svg) no-repeat;
   background-size: 28px auto;
   content: "";
-  /*padding-right: .25rem;*/
-  position: absolute;
-  left: 0;
-  top: 0;
+  display: inline-block;
   height: 30px;
+  padding-right: .125ch;
+  position: relative;
+  top: 4px;
+  vertical-align: middle;
   width: 30px;
 }
 
 .oss-project-description {
   max-width: 22rem;
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .aframe-wordmark:before {
+    background-size: 32px auto;
+    top: 2px;
+    width: 34px;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .aframe-wordmark:before {
+    background-size: 36px auto;
+    top: 1px;
+    width: 38px;
+  }
 }
 
 @media screen and (min-width: 30em) {
