@@ -196,6 +196,14 @@ ul {
   max-width: 22rem;
 }
 
+[data-code-lang~="bash"]:before,
+[data-code-lang~="sh"]:before,
+[data-code-lang~="shell"]:before,
+[data-code-lang] .shell-line:before {
+  color: #137752;
+  content: "$ ";
+}
+
 @media screen and (min-width: 60em) {
   .aframe-wordmark:before {
     background-size: 36px auto;
