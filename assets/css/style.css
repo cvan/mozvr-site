@@ -167,16 +167,18 @@ ul {
   font-size: 0;  /* For `display: inline-block` spacing. */
 }
 
+.mozillavr-header {
+  background-color: #111;
+}
+
 .aframe-header {
   background-color: #ef2d5e;
 }
 
 .aframe-wordmark {
   color: #fff;
-  /*text-indent: 30px;*/
-  text-shadow: .5px .5px 0 rgba(0,0,0,.5);
-  /*padding-left: .5rem;*/
   position: relative;
+  text-shadow: .5px .5px 0 rgba(0,0,0,.5);
 }
 
 .aframe-wordmark:before {
