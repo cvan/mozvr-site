@@ -122,6 +122,22 @@ ul {
   opacity: 1;
 }
 
+[data-section~="create"] {
+  position: relative;
+}
+
+[data-section~="create"]:after {
+  background: url(../img/vr-screen-monitor.svg) 100% 100% no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 60%;
+  top: 3rem;
+  right: 3rem;
+  width: 500px;
+}
+
 .logo {
   display: inline-block;
   position: relative;
@@ -175,14 +191,14 @@ ul {
   background-color: #ef2d5e;
 }
 
-.aframe-wordmark {
+.wordmark {
   color: #fff;
   position: relative;
   text-shadow: .5px .5px 0 rgba(0,0,0,.5);
 }
 
-.aframe-wordmark:before {
-  background: url(../img/aframe-sticker-diecut.svg) no-repeat;
+.wordmark:before {
+  background-repeat: no-repeat;
   background-size: 28px auto;
   content: "";
   display: inline-block;
@@ -192,6 +208,16 @@ ul {
   top: 4px;
   vertical-align: middle;
   width: 30px;
+}
+
+.aframe-wordmark:before {
+  background-image: url(../img/aframe-sticker-diecut.svg);
+}
+
+.mozillavr-wordmark:before {
+  background-image: url(../img/mozillavr-icon.svg);
+  transform-origin: 0 100%;
+  transform: scale(.9);
 }
 
 .oss-project-description {
@@ -207,7 +233,7 @@ ul {
 }
 
 @media screen and (min-width: 60em) {
-  .aframe-wordmark:before {
+  .wordmark:before {
     background-size: 36px auto;
     top: 1px;
     width: 38px;
@@ -241,14 +267,14 @@ ul {
     width: 4rem;
   }
 
-  .aframe-header {
+  .site-header {
     padding-bottom: 1.1rem;
     padding-top: 1.4rem;
   }
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
-  .aframe-wordmark:before {
+  .wordmark:before {
     background-size: 32px auto;
     top: 2px;
     width: 34px;

@@ -98,11 +98,13 @@
     clickEl.click();
   }
 
-  window.addEventListener('hashchange', function () {
-    // When the "Mozilla VR" wordmark in the top nav is clicked,
-    // remove the `#top` hash from the URL.
-    if (window.location.hash === '#top') {
-      window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+  window.addEventListener('load', function () {
+    var video = document.getElementById('video');
+    if (video) {
+      video.playbackRate = .5;
+      if (!video.autoplay) {
+        video.play();
+      }
     }
   });
 })();

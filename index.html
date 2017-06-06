@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="assets/css/tachyons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <link rel="icon" href="assets/img/mozillavr-icon.png">
+    <link rel="icon" href="assets/img/icon-mozvr-fox-128.png">
+
+    <link rel="manifest" href="manifest.webmanifest">
 
     <meta property="og:title" content="Mozilla VR">
     <meta property="og:site_name" content="Mozilla VR">
@@ -25,7 +27,7 @@
     <meta name="twitter:creator" content="@mozillavr">
   </head>
   <body class="bg-black white-70">
-    <header class="w-100 ph5-ns pv3-l bg-near-black bb b--white-20 mozillavr-header">
+    <header class="w-100 ph5-ns pv3-l bg-near-black bb b--white-20 site-header mozillavr-header">
       <div class="db dt-ns mw9 center w-100">
         <a class="mozilla-wordmark-badge db o-80" href="https://mozilla.org/"><img class="absolute top-0 right-0" src="../assets/img/logo-mozilla-white.svg"></a>
       </div>
@@ -37,22 +39,26 @@
           </a>
         </div>
 
-        <div class="db dtc-ns v-mid tl w-10 pr1 pl2">
+        <nav class="db dtc-ns v-mid w-100 tr-ns mt0-ns pa3 pt1 pa3-ns pt2-ns pa0-l">
+          <a title="About WebVR" href="#webvr"
+              class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
+            WebVR
+          </a>
+          <a title="A-Frame" href="#aframe"
+              class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
+            A-Frame
+          </a>
           <a title="Firefox" href="#firefox"
               class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
             Firefox
           </a>
-          <a title="Firefox" href="#firefox"
+          <a title="Servo" href="#servo"
               class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
             Servo
           </a>
-          <a title="Firefox" href="#firefox"
+          <a title="Projects" href="#projects"
               class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
-            A-Frame
-          </a>
-          <a title="In the works" href="#in-the-works"
-              class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
-            In the works
+            Projects
           </a>
           <a title="Blog" href="#blog"
               class="f6 fw6 link black-70 pr2 pr3-m pr4-l dib white-80 hover-white pv3-l">
@@ -63,13 +69,12 @@
             Contact
           </a>
           <a class="f6 dib white bg-animate hover-bg-white hover-black no-underline pv2 ph3 ba b--white-20" href="https://twitter.com/mozillavr" title="@MozillaVR on Twitter">
-            <svg class="dib h1 w1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg>
+            <svg class="dib h1 w1 v-mid" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg>
             <span class="ml2"><strong class="b-ns pl1 pr1-ns">@MozillaVR</strong><span class="o-70"> on Twitter</span></span>
           </a>
-        </div>
-      </nav>
-    </div>
-    </path>
+        </nav>
+      </div>
+    </header>
 
     <!--
     <header id="about" class="about bg-near-white pa3 pa3-ns" data-section="nav">
@@ -83,34 +88,152 @@
     -->
 
     <main class="w-100 bg-white">
-      <section id="oss" data-section="oss" class="tl pa5-ns bg-light-green black">
-        <div class="mw8 center">
-          <h2 class="f2 fw6 bt b-dark-green-90 bw2 black-90 pt4 pb4 dark-green lh-title">Open-Source Software</h2>
-          <section class="pt2">
-            <ul class="flex-ns flex-wrap-ns flex-row-ns content-stretch space-between items-stretch nt2 nl2">
-              <li data-slug="a-frame" class="w-25-l w-third-ns w-50-m pa2">
-                <a href="aframe.html" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
-                  <h3 class="f4 fw6 pb1 pb3-l">A-Frame</h3>
-                  <p class="fw2 o-90 pb2 oss-project-description pb3">A web framework for creating VR using HTML &amp; JavaScript.</p>
-                  <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive, Rift, Daydream, Gear VR, and Cardboard.</p>
-                </a>
-              </li>
-              <li data-slug="firefox" class="w-25-l w-third-ns w-50-m pa2">
-                <a href="https://webvr.rocks/firefox" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
-                  <h3 class="f4 fw6 pb1 pb3-l">Firefox</h3>
-                  <p class="fw2 o-90 pb2 oss-project-description pb3">A desktop web browser for experiencing WebVR sites.</p>
-                  <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive and Rift on Windows for WebVR API <span class="api-version o-60">(v1.1)</span><!-- https://w3c.github.io/webvr/spec/1.1/ -->.</p>
-                </a>
-              </li>
-              <li data-slug="servo" class="w-25-l w-third-ns w-50-m pa2">
-                <a href="https://webvr.rocks/servo" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
-                  <h3 class="f4 fw6 pb1 pb3-l">Servo</h3>
-                  <p class="fw2 o-90 pb2 oss-project-description pb3">A next-generation parallelized, embedded browser engine.</p>
-                  <p class="fw2 f6 o-70 mb0 b--black-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive on Windows for WebVR API <span class="api-version o-60">(v1.2)</span>.</p>
-                </a>
-              </li>
-            </ul>
-          </section>
+      <!-- <div class="cf mw9 center tc-m flex-l pv4-l"> -->
+      <article id="oss" data-section="oss" class="tl mw9 pa3 pa0-ns w-100">
+        <div class="mw9 center">
+          <div class="flex-ns vh-50-ns">
+            <div class="pr5-ns ph5-ns w-90-ns gray">
+              <h2 class="f2 fw6 bb b--black-20 black-90 pt4 pb3 lh-title mw5">Defining Virtual Reality on the Web</h2>
+              <p class="pt3 pt4-ns f4 spt5 lh-copy">We help design the <a href="#webvr" class="fw5 dim orange">WebVR API</a> standard, for displaying VR web pages in <a href="#firefox" class="fw5 dim" style="color: #0095dd">Firefox</a>, our desktop browser, and <a href="#servo" class="fw5 dim" style="color: #630">Servo</a>, a next-generation, parallel browser engine.</p>
+              <p class="f4 pt3 pt4-ns lh-copy">We make <a href="#aframe" class="fw5 dim" style="color: #ef2d5e">A-Frame</a>, a Web framework for creating VR.</p>
+            </div>
+            <div class="pr5-m pr0-ns w-100 h-100-ns tr">
+              <video id="video" class="w-100 h-100-ns" src="assets/videos/progressiveEnhancement.mp4#t=3" loop webkit-playsinline playsinline autoplay></video>
+            </div>
+          </div>
+          <!--
+          <ul class="flex-ns flex-wrap-ns flex-row-ns content-stretch space-between items-stretch nt2 nl2">
+            <li data-slug="a-frame" class="w-25-l w-third-ns w-50-m pa2">
+              <a href="aframe.html" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
+                <h3 class="f4 fw6 pb1 pb3-l">A-Frame</h3>
+                <p class="fw2 o-90 pb2 oss-project-description pb3">A web framework for creating VR using HTML &amp; JavaScript.</p>
+                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive, Rift, Daydream, Gear VR, and Cardboard.</p>
+              </a>
+            </li>
+            <li data-slug="firefox" class="w-25-l w-third-ns w-50-m pa2">
+              <a href="https://webvr.rocks/firefox" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
+                <h3 class="f4 fw6 pb1 pb3-l">Firefox</h3>
+                <p class="fw2 o-90 pb2 oss-project-description pb3">A desktop web browser for experiencing WebVR sites.</p>
+                <p class="fw2 f6 o-70 mb0 b--white-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive and Rift on Windows for WebVR API <span class="api-version o-60">(v1.1)</span> https://w3c.github.io/webvr/spec/1.1/.</p>
+              </a>
+            </li>
+            <li data-slug="servo" class="w-25-l w-third-ns w-50-m pa2">
+              <a href="https://webvr.rocks/servo" class="outline-0 pa3 ba bw1 b--black-30 h-100 relative-p">
+                <h3 class="f4 fw6 pb1 pb3-l">Servo</h3>
+                <p class="fw2 o-90 pb2 oss-project-description pb3">A next-generation parallelized, embedded browser engine.</p>
+                <p class="fw2 f6 o-70 mb0 b--black-40 b--dotted bt br-0 bl-0 bb-0 pt2">Supports Vive on Windows for WebVR API <span class="api-version o-60">(v1.2)</span>.</p>
+              </a>
+            </li>
+          </ul>
+          -->
+        </div>
+      </div>
+      </article>
+      <article class="bt b--black-10 bg-near-black white-70 ph3 ph5-ns pv4 pv5-ns" id="webvr">
+        <div class="mw9 measure">
+          <h2 class="mt0 f3-ns white-90">WebVR API</h2>
+
+          <article id="is-webvr-a-standard">
+            <p class="pt3 measure lh-copy">WebVR is an open collaboration between multiple stakeholders and is actively being developed as part of a <a href="https://www.w3.org/community/webvr/" rel="noopener noreferrer" class="white-90 underline-hover"><strong class="fw6">W3C community group</strong></a>.</p>
+            <p class="pt3 measure lh-copy">Developers can use WebVR today to create VR experiences in <strong>Firefox</strong>, <strong>Edge</strong>, <strong>Samsung Internet</strong>, <strong>Oculus</strong>, and <strong>Chrome for Android</strong>.</p>
+            <p class="pt3 measure lh-copy">You can view ongoing work on the <a href="https://github.com/w3c/webvr/" rel="noopener noreferrer" class="white-90 underline-hover"><strong class="fw6">WebVR GitHub</strong></a> site, including an extension to the <a href="https://w3c.github.io/webvr/spec/1.1/" rel="noopener noreferrer" class="white-90 underline-hover">initial specification</a> to improve head motion tracking and tools for creating a trusted UI environment.</p>
+          </article>
+        </div>
+      </article>
+
+      <article class="bb b--black-10 bg-near-black white-90 ph3 ph5-ns pv4 pv5-ns" id="aframe" style="background-color: #ef2d5e">
+
+        <h2 class="f2 lh-title">A-Frame</h2>
+        <p class="pt3 measure lh-copy mb4">Join the thriving community of <a href="https://aframe.io/community/" class="white-90 underline-hover fw6">A-Frame</a> developers building VR experiences using simple HTML. Anyone can create fully interactive 3D worlds with very little experience, so there&#8217;s no need to learn linear algebra or code in C++.</p>
+        <p class="measure-narrow fw2 f6 o-60 mb0 b--black-10 bt br-0 bl-0 bb-0 pt3 mt3">A-Frame is built on the <a href="http://threejs.org/" rel="noopener noreferrer" class="white-90 underline-hover fw5">Three.js</a> JavaScript 3D engine library. Want another option? <a href="https://playcanvas.com/" rel="noopener noreferrer" class="white-90 underline-hover fw5">PlayCanvas</a> also has good documentation and an active community.</p>
+        </div>
+      </article>
+
+      <article class="bb b--black-10 bg-near-black white-90 ph3 ph5-ns pv4 pv5-ns" id="firefox" style="background-color: #def; color: #0095dd">
+
+        <h2 class="f2 lh-title">Firefox</h2>
+        <p class="pt3 fw2 o-90 pb2 oss-project-description pb3">A desktop Web browser for experiencing WebVR sites.</p>
+        <p class="measure-narrow fw2 f6 o-60 mb0 b--black-10 bt br-0 bl-0 bb-0 pt3 mt3">Supports <strong>HTC VIVE</strong> and <strong>Oculus Rift</strong> <br> on <strong>Windows</strong> and <strong>macOS</strong> <br> for WebVR API <a href="https://w3c.github.io/webvr/spec/1.1/" class="api-version o-60">(version 1.1)</a></p>
+      </article>
+
+      <article class="bb b--black-10 bg-near-black white-90 ph3 ph5-ns pv4 pv5-ns" id="servo" style="background-color: #fed; color: #630">
+
+        <h2 class="f2 lh-title">Servo</h2>
+        <p class="pt3 fw2 o-90 pb2 oss-project-description pb3">A next-generation, parallel Web browser, optimized for graphics and 3D rendering.</p>
+        <p class="measure-narrow fw2 f6 o-60 mb0 b--black-10 bt br-0 bl-0 bb-0 pt3 mt3">Supports <strong>HTC VIVE</strong> <br> on <strong>Windows</strong> and <strong>Android</strong> <br> for WebVR API <a href="https://w3c.github.io/webvr/spec/1.1/" class="api-version o-60 color-inherit">(version 1.2)</a></p>
+      </article>
+
+      <article class="bb b--black-10 bg-white black-80 ph3 ph5-ns pv4 pv5-ns" id="projects">
+        <h2 class="f2 lh-title">Projects</h2>
+
+        <p class="pt3 fw2 o-90 pb2 oss-project-description pb3">Some highlights of WebVR and A-Frame <strong>experiences we&rsquo;ve built</strong>. Also, you can take a peek at <strong>what we&rsquo;re currently working on</strong> too!</p>
+      </article>
+
+      <article class="bg-washed-yellow black-70 ph3 ph5-ns pv4 pv5-ns create" id="create" data-section="create">
+        <div class="mw9 measure">
+          <h2 class="mt0 f5 f4-ns dark-red">Create VR using HTML and JavaScript</h2>
+          <p class="pt3 o-90"><strong class="fw6">Build immersive virtual worlds</strong> with a few lines of code. Reach an audience of millions using open standards. Craft virtual reality (VR) experiences for mobile devices everywhere. Mozilla leads VR technologies and standards on the web.</p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="bg-white black-70 ph3 ph5-ns pv3 pv5-ns bt b--black-10">
+      <div class="mw9 center">
+        <div class="pt2">
+          <a class="ba br1 black-70 bg-light-yellow no-underline grow b inline-flex items-center mr4 mb3 mb4-ns pv2 ph3 w-100 w-auto-ns" href="https://webcompat.com/" title="File a Firefox bug on WebCompat.com">
+            <!--style="background-color: #ffc900; color: #404040"-->
+            <div class="w2 pv1 pr2">
+              <img class="v-mid br4 ba b--black-60" height="18" width="18" src="assets/img/icon-webcompat-96.png">
+            </div>
+            <span>File a Firefox bug on WebCompat.com</span>
+          </a>
+          <a class="ba black-70 bg-gold no-underline grow br1 b inline-flex items-center mr4 mb3 mb4-ns pv2 ph3 w-100 w-auto-ns" href="https://stackoverflow.com/questions/tagged/aframe" title="Question? Ask on Stack Overflow">
+            <div class="w2 pv1 pr2">
+              <svg class="v-mid" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12.658 14.577v-4.27h1.423V16H1.23v-5.693H2.65v4.27h10.006zm-8.583-1.423h7.16V11.73h-7.16v1.424zm.173-3.235l6.987 1.465.3-1.38L4.55 8.54l-.302 1.38zm.906-3.365l6.47 3.02.602-1.295-6.47-3.02-.602 1.295zm1.81-3.19l5.478 4.57.906-1.078-5.477-4.57-.905 1.077zM10.502 0L9.338.863l4.27 5.735 1.164-.862L10.5 0z"/></svg>
+            </div>
+            <span>A-Frame Question? Ask on Stack Overflow</span>
+          </a>
+          <a class="ba br1 black-70 bg-moon-gray no-underline grow b inline-flex items-center mr4 mb3 mb4-ns pv2 ph3 w-100 w-auto-ns" href="https://github.com/aframevr/aframe/issues" title="File a bug, request a feature, or ask a question!">
+            <div class="w2 pv1 pr2">
+              <svg class="v-mid" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"/></svg>
+            </div>
+            <span>Report an A-Frame issue on GitHub</span>
+          </a>
+          <a class="ba dark-green bg-light-green no-underline grow br1 b inline-flex items-center mr4 mb3 mb4-ns pv2 ph3 w-100 w-auto-ns" href="https://slacknow.herokuapp.com/aframevr/" title="Chat on the A-Frame Community Slack">
+            <div class="dib w2 pv1 pr2">
+              <svg class="v-mid" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><g fill-rule="nonzero"><path d="M6.586 7.33l.69 2.057 2.137-.716-.69-2.056-2.137.716z"/><path d="M12.55 9.37l-1.037.347.36 1.073c.145.434-.09.904-.524 1.05-.096.03-.19.045-.287.042-.338-.01-.65-.226-.765-.566l-.36-1.072-2.138.716.36 1.072c.145.435-.09.905-.523 1.05-.096.032-.192.045-.286.043-.34-.01-.65-.226-.764-.566l-.36-1.075-1.037.348c-.096.03-.19.045-.286.042-.34-.008-.65-.226-.765-.565-.146-.434.09-.904.522-1.05L5.7 9.914l-.69-2.058-1.037.347c-.094.032-.19.045-.285.043-.338-.01-.65-.226-.765-.566-.145-.434.09-.904.523-1.05l1.037-.347-.36-1.073c-.145-.434.09-.904.524-1.05.435-.145.905.09 1.05.524l.36 1.072 2.137-.716-.36-1.072c-.144-.435.09-.905.524-1.05.435-.145.906.09 1.05.523l.36 1.075 1.037-.347c.434-.146.904.088 1.05.522.145.434-.09.904-.523 1.05l-1.037.347.69 2.057 1.036-.347c.435-.145.905.09 1.05.523.146.434-.09.904-.522 1.05zm2.78-3.57C13.68.304 11.298-.98 5.8.67.304 2.32-.98 4.7.67 10.2c1.65 5.497 4.03 6.78 9.53 5.13 5.497-1.65 6.78-4.03 5.13-9.53z"/></g></svg>
+            </div>
+            <span>Chat on the A-Frame Community Slack</span>
+          </a>
+          <a class="ba black-70 bg-blue washed-blue b--navy no-underline grow br1 b inline-flex items-center mb3 mb4-ns pv2 ph3 w-100 w-auto-ns" href="https://twitter.com/mozillavr" title="Follow us on Twitter: @mozillavr">
+            <div class="w2 pv1 pr2">
+              <svg class="v-mid" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg>
+            </div>
+            <span>Follow @MozillaVR on Twitter</span>
+          </a>
+        </div>
+        <p class="f6 measure-wide copy lh-copy pt4 pt3-ns">
+          <strong class="fw6">Have a question about A-Frame?</strong> Check out <a href="https://aframe.io/faq">A-Frame&rsquo;s FAQ</a>. <strong class="fw4">Need help with A-Frame?</strong> And feel free to <a href="https://stackoverflow.com/questions/tagged/aframe">ask a question on Stack Overflow</a>, or <a href="https://github.com/aframevr/aframe/issues">open an issue on GitHub</a>.
+        </p>
+        <p class="f6 measure-wide copy lh-copy pt4 pt3-ns">
+          <strong class="fw6">Chat with the community</strong> on the <a href="https://slacknow.herokuapp.com/webvr/"><strong class="fw6">WebVR Slack</strong></a> and <a href="https://slacknow.herokuapp.com/webvr/"><strong class="fw6">A-Frame Slack</strong></a>! Or <a href="https://mail.mozilla.org/listinfo/web-vr-discuss">subscribe to the WebVR Discussion email list</a>, and <a href="https://mail.mozilla.org/pipermail/web-vr-discuss/">dig through the archives</a>.
+        </p>
+        <p class="f6 measure-wide copy lh-copy pt4 pt3-ns">
+          The Mozilla VR team is more than just a team of folks employed by Mozilla. We&rsquo;re part of larger community efforts of <a href="https://github.com/w3c/webvr"><strong class="fw6">standardizing the WebVR API</strong></a> for browsers, <a href="https://aframe.io/"><strong class="fw6">developing WebVR content-creation tools</strong></a>, and <a href="https://webvr.rocks/"><strong class="fw6">spreading the awesomeness of WebVR</strong></a>!
+        </p>
+        <p class="f6 measure-wide copy lh-copy pt4 pt3-ns">
+          Mozilla prides itself on its <strong class="fw6">open, accessible, and friendly communities</strong> for all. Join us on whatever you&rsquo;re interested in: <a href="https://aframe.io/community/"><strong class="fw4">A-Frame</strong></a>, <a href="https://servo.org/#contributing"><strong class="fw4">Servo</strong></a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Introduction"><strong class="fw4">Firefox</strong></a>, <a href="https://webcompat.com/contributors"><strong class="fw4">Web Compatibility</strong></a> &ndash; <a href="https://webvr.rocks/"><strong class="fw6">WebVR Rocks</strong></a>!
+        </p>
+        <p class="f6 measure-wide copy lh-copy pt4 pt3-ns">
+          We want the Internet to be a safe place, both in two and three dimensions. We follow <a href="https://webvr.rocks/code_of_conduct">this <strong class="fw6">Code of Conduct</strong></a>. Mozilla also deeply cares about <a href="https://www.mozilla.org/en-US/internet-health/privacy-security/">your <strong class="fw6">privacy and security</strong></a>, especially when it comes to data ownership and data collection. Read the <a href="https://www.mozilla.org/en-US/privacy/websites/"><strong class="fw6">Privacy Policy</strong> for this site</a>.
+        </p>
+        <p class="f6 measure-wide copy lh-copy pt4 pt3-ns">
+          This site&rsquo;s content is published under a <a href="https://www.mozilla.org/en-US/foundation/licensing/website-content/">Creative Commons Attribution Share-Alike 3.0 Unported license</a>. You can view this site&rsquo;s <a href="https://github.com/MozVR/mozvr-site"><strong class="fw4">open-source code on GitHub</strong></a>, and feel free to suggest any changes or corrections by <a href="https://github.com/MozVR/mozvr-site/edit/master/index.html"><strong class="fw4">editing this page on GitHub</strong></a>.
+        </p>
+      </div>
+    </footer>
+
+<!--
         </div>
       </section>
 
@@ -151,6 +274,7 @@
           </section>
         </div>
       </section>
+-->
 
       <!--
       <section class="section section--team">

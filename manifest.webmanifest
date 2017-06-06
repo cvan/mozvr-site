@@ -1,0 +1,14 @@
+{
+  "lang": "en",
+  "name": "Mozilla VR",
+  "short_name": "Mozilla VR",
+  "icons": [
+    {
+      "src": "https://mozvr.com/assets/img/icon-mozvr-fox-128.png",
+      "sizes": "128x128"
+    }
+  ],
+  "start_url": "./?src=manifest",
+  "display": "minimal-ui",
+  "orientation": "portrait"
+}
